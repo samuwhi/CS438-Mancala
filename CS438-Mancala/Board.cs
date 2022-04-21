@@ -53,6 +53,8 @@ namespace CS438_Mancala
             int stones = gameState[playerTurn, pocket];
             int row = playerTurn;
             int col = pocket;
+
+            gameState[playerTurn, pocket] = 0;
             for(int i = 0; i < stones; i++) {
                 if (playerTurn == 0) {
                     if (col == 5 && row == 1) {

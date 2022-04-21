@@ -161,6 +161,7 @@
             this.Pocket1.TabIndex = 1;
             this.Pocket1.Text = "4";
             this.Pocket1.UseVisualStyleBackColor = true;
+            this.Pocket1.Click += new System.EventHandler(this.Pocket1_Click);
             // 
             // Pocket14
             // 
@@ -202,6 +203,7 @@
             this.Name = "MancalaGUI";
             this.Text = "Mancala";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.Pocket1_Click);
             this.ResumeLayout(false);
 
         }

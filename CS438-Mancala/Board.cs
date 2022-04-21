@@ -8,34 +8,18 @@ namespace CS438_Mancala
 {
     public class Board
     {
-        public int[] gameState;
+
+        public int[,] gameState;
         public int playerTurn;
 
         public Board()
         {
-            this.gameState = new int[] { 4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4, 0 };
-            this.playerTurn = 1;
-        }
-
-        private int getIndex(int pocket)
-        {
-            int index;
-
-            if (playerTurn == 1)
-            {
-                index = pocket - 1;
-            }
-            else
-            {
-                index = pocket + 6;
-            }
-
-            return index;
+            this.gameState = new int[,] { {0, 4, 4, 4, 4, 4, 4}, {4, 4, 4, 4, 4, 4, 0 } };
+            this.playerTurn = 0;
         }
 
         private bool isValid(int index)
         {
-
             return true;
         }
 

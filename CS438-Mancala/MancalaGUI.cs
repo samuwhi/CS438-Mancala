@@ -13,11 +13,26 @@ namespace CS438_Mancala
     public partial class MancalaGUI : Form
     {
         public Board board;
+        public Button[] player1Pockets;
+        public Button[] player2Pockets;
         public MancalaGUI()
         {
             InitializeComponent();
             this.board = new Board();
+            this.player1Pockets = new Button[] { Pocket7, Pocket6, Pocket5, Pocket4, Pocket3, Pocket2, Pocket1 };
+            this.player2Pockets = new Button[] { Pocket8, Pocket9, Pocket10, Pocket11, Pocket12, Pocket13, Pocket14 };
+        }
 
+        private void Update_Pockets()
+        {
+            for (int i = 0; i < this.player1Pockets.Length; i++)
+            {
+                this.player1Pockets[i].Text = this.board.gameState[0, i].ToString();
+            }
+            for (int i = 0; i < this.player2Pockets.Length; i++)
+            {
+                this.player2Pockets[i].Text = this.board.gameState[1, i].ToString();
+            }
         }
 
 
@@ -28,7 +43,7 @@ namespace CS438_Mancala
 
         private void Pocket1_Click(object sender, EventArgs e)
         {
-            
+            Update_Pockets();
         }
 
         private void Pocket2_Click(object sender, EventArgs e)

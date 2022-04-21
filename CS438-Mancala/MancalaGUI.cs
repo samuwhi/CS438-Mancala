@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace CS438_Mancala
 {
     public partial class MancalaGUI : Form
     {
-        public string fileName1;
-        public string fileName2;
-        public int playerTurn = 1;
+        public string fileName1 = "";
+        public string fileName2 = "";
 
         public Board board;
         public Button[] player1Pockets;
@@ -38,20 +38,13 @@ namespace CS438_Mancala
                 player2Pockets[i].Text = board.gameState[1, i].ToString();
             }
 
-            Update_Current_Turn();
-        }
-
-        private void Update_Current_Turn()
-        {
-            if (playerTurn == 1)
+            if (board.playerTurn == 0)
             {
-                playerTurn = 2;
-                CurrentPlayerTurnButton.BackColor = Color.OrangeRed;
+                CurrentPlayerTurnButton.BackColor = Color.SteelBlue;
             }
             else
             {
-                playerTurn = 1;
-                CurrentPlayerTurnButton.BackColor = Color.SteelBlue;
+                CurrentPlayerTurnButton.BackColor = Color.OrangeRed;
             }
         }
 
@@ -99,7 +92,6 @@ namespace CS438_Mancala
         private void Pocket7_Click(object sender, EventArgs e)
         {
             // This is player 1s Pit
-            
         }
 
         private void Pocket8_Click(object sender, EventArgs e)
@@ -140,7 +132,7 @@ namespace CS438_Mancala
 
         private void Pocket14_Click(object sender, EventArgs e)
         {
-            
+            //This is player 2's pit
         }
 
         private void Human1Button_Click(object sender, EventArgs e)
@@ -189,7 +181,15 @@ namespace CS438_Mancala
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-
+            //This needs fixed, got to wait for whoevers turn to be over with before starting up.
+            if (fileName1 != "")
+            {
+                Process.Start(fileName1);
+            }
+            if (fileName2 != "")
+            {
+                Process.Start(fileName2);
+            }
         }
 
         private void ResetButton_Click(object sender, EventArgs e)

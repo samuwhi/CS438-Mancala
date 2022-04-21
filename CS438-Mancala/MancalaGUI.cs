@@ -22,20 +22,20 @@ namespace CS438_Mancala
         public MancalaGUI()
         {
             InitializeComponent();
-            this.board = new Board();
-            this.player1Pockets = new Button[] { Pocket7, Pocket6, Pocket5, Pocket4, Pocket3, Pocket2, Pocket1 };
-            this.player2Pockets = new Button[] { Pocket8, Pocket9, Pocket10, Pocket11, Pocket12, Pocket13, Pocket14 };
+            board = new Board();
+            player1Pockets = new Button[] { Pocket7, Pocket6, Pocket5, Pocket4, Pocket3, Pocket2, Pocket1 };
+            player2Pockets = new Button[] { Pocket8, Pocket9, Pocket10, Pocket11, Pocket12, Pocket13, Pocket14 };
         }
 
         private void Update_Pockets()
         {
-            for (int i = 0; i < this.player1Pockets.Length; i++)
+            for (int i = 0; i < player1Pockets.Length; i++)
             {
-                this.player1Pockets[i].Text = this.board.gameState[0, i].ToString();
+                player1Pockets[i].Text = board.gameState[0, i].ToString();
             }
-            for (int i = 0; i < this.player2Pockets.Length; i++)
+            for (int i = 0; i < player2Pockets.Length; i++)
             {
-                this.player2Pockets[i].Text = this.board.gameState[1, i].ToString();
+                player2Pockets[i].Text = board.gameState[1, i].ToString();
             }
 
             Update_Current_Turn();
@@ -62,66 +62,79 @@ namespace CS438_Mancala
 
         private void Pocket1_Click(object sender, EventArgs e)
         {
+            board.makeMove(6);
             Update_Pockets();
         }
 
         private void Pocket2_Click(object sender, EventArgs e)
         {
+            board.makeMove(5);
             Update_Pockets();
         }
 
         private void Pocket3_Click(object sender, EventArgs e)
         {
+            board.makeMove(4);
             Update_Pockets();
         }
 
         private void Pocket4_Click(object sender, EventArgs e)
         {
+            board.makeMove(3);
             Update_Pockets();
         }
 
         private void Pocket5_Click(object sender, EventArgs e)
         {
+            board.makeMove(2);
             Update_Pockets();
         }
 
         private void Pocket6_Click(object sender, EventArgs e)
         {
+            board.makeMove(1);
             Update_Pockets();
         }
 
         private void Pocket7_Click(object sender, EventArgs e)
         {
+            // This is player 1s Pit
             
         }
 
         private void Pocket8_Click(object sender, EventArgs e)
         {
+            board.makeMove(1);
             Update_Pockets();
         }
 
         private void Pocket9_Click(object sender, EventArgs e)
         {
+            board.makeMove(2);
             Update_Pockets();
         }
 
         private void Pocket10_Click(object sender, EventArgs e)
         {
+            board.makeMove(3);
             Update_Pockets();
         }
 
         private void Pocket11_Click(object sender, EventArgs e)
         {
+            board.makeMove(4);
             Update_Pockets();
         }
 
         private void Pocket12_Click(object sender, EventArgs e)
         {
+            board.makeMove(5);
             Update_Pockets();
         }
 
         private void Pocket13_Click(object sender, EventArgs e)
         {
+            board.makeMove(6);
             Update_Pockets();
         }
 

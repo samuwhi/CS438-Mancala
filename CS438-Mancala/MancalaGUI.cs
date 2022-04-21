@@ -84,7 +84,62 @@ namespace CS438_Mancala
 
         }
 
+        private void Pocket13_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Pocket14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Human1Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Computer1Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Player1ConsoleWindowCheck_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Human2Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Computer2Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Player2ConsoleWindowCheck_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StartButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StepForwardButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StepBackButton_Click(object sender, EventArgs e)
         {
 
         }

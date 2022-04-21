@@ -430,7 +430,7 @@
             // CurrentPlayerTurnButton
             // 
             this.CurrentPlayerTurnButton.BackColor = System.Drawing.Color.SteelBlue;
-            this.CurrentPlayerTurnButton.Location = new System.Drawing.Point(942, 257);
+            this.CurrentPlayerTurnButton.Location = new System.Drawing.Point(954, 257);
             this.CurrentPlayerTurnButton.Name = "CurrentPlayerTurnButton";
             this.CurrentPlayerTurnButton.Size = new System.Drawing.Size(100, 100);
             this.CurrentPlayerTurnButton.TabIndex = 19;

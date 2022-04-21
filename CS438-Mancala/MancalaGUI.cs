@@ -6,12 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace CS438_Mancala
 {
     public partial class MancalaGUI : Form
     {
+        private const string LOGFILENAME = "Mancala Log.txt";
+
         public Board board;
         public Button[] player1Pockets;
         public Button[] player2Pockets;
@@ -21,6 +24,13 @@ namespace CS438_Mancala
             board = new Board();
             player1Pockets = new Button[] { Pocket7, Pocket6, Pocket5, Pocket4, Pocket3, Pocket2, Pocket1 };
             player2Pockets = new Button[] { Pocket8, Pocket9, Pocket10, Pocket11, Pocket12, Pocket13, Pocket14 };
+
+            // Create new log file
+            if (File.Exists(LOGFILENAME))
+            {
+                File.Delete(LOGFILENAME);
+            }
+            StreamWriter sw = File.CreateText(LOGFILENAME);
         }
 
         private void Update_Pockets()
@@ -32,6 +42,18 @@ namespace CS438_Mancala
             for (int i = 0; i < player2Pockets.Length; i++)
             {
                 player2Pockets[i].Text = board.gameState[1, i].ToString();
+            }
+        }
+
+        private void Log_Move(int pocket)
+        {
+            string move;
+
+            move = board.playerTurn.ToString() + " " + pocket.ToString();
+
+            using (StreamWriter sw = File.AppendText(LOGFILENAME))
+            {
+                sw.WriteLine(move);
             }
         }
 
@@ -109,7 +131,7 @@ namespace CS438_Mancala
 
         private void Pocket14_Click(object sender, EventArgs e)
         {
-
+            // This is player 2's pit
         }
 
         private void Human1Button_Click(object sender, EventArgs e)

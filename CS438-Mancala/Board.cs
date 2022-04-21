@@ -24,7 +24,8 @@ namespace CS438_Mancala
             {
                 File.Delete(LOGFILENAME);
             }
-            StreamWriter sw = File.CreateText(LOGFILENAME);
+            var outFile = File.CreateText(LOGFILENAME);
+            outFile.Close();
         }
 
         public void Log_Move(int pocket)

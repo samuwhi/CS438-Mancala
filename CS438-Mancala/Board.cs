@@ -16,7 +16,8 @@ namespace CS438_Mancala
 
         public Board()
         {
-            this.gameState = new int[,] { {0, 4, 4, 4, 4, 4, 4}, {4, 4, 4, 4, 4, 4, 0 } };
+            this.gameState = new int[,] {   {0, 4, 4, 4, 4, 4, 4}, 
+                                            {4, 4, 4, 4, 4, 4, 0 } };
             this.playerTurn = 0;
 
             // Create new log file
@@ -40,9 +41,15 @@ namespace CS438_Mancala
             }
         }
 
-        private bool isValid(int index)
+        private void changeTurn()
         {
-            return true;
+            if (playerTurn == 0)
+            {
+                playerTurn = 1;
+            } else
+            {
+                playerTurn = 0;
+            }
         }
 
         public void makeMove(int pocket)
@@ -60,7 +67,7 @@ namespace CS438_Mancala
                     if (col == 5 && row == 1) {
                         row--;
                         col++;
-                    } else if (col == 0 && row == 0)
+                    } else if (col == 0 && row == 0) 
                         row++;
                     else if (row == 0)
                         col--;
@@ -68,6 +75,7 @@ namespace CS438_Mancala
                         col++;
 
                     gameState[row, col] += 1;
+                   
                 }
 
                 if (playerTurn == 1) {
@@ -82,8 +90,10 @@ namespace CS438_Mancala
                         col--;
 
                     gameState[row, col] += 1;
+                    
                 }
             }
+            changeTurn();
 
         }
     }

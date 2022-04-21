@@ -22,11 +22,6 @@ namespace CS438_Mancala
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Pocket1_Click(object sender, EventArgs e)
         {
 
@@ -57,7 +52,7 @@ namespace CS438_Mancala
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Pocket7_Click(object sender, EventArgs e)
         {
 
         }

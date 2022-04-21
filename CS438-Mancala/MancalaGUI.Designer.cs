@@ -92,6 +92,7 @@
             this.Pocket7.TabIndex = 7;
             this.Pocket7.Text = "Pocket";
             this.Pocket7.UseVisualStyleBackColor = true;
+            this.Pocket7.Click += new System.EventHandler(this.Pocket7_Click);
             // 
             // Pocket8
             // 

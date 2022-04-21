@@ -12,9 +12,11 @@ namespace CS438_Mancala
 {
     public partial class MancalaGUI : Form
     {
+        public Board board;
         public MancalaGUI()
         {
             InitializeComponent();
+            this.board = new Board();
 
         }
 
@@ -26,7 +28,7 @@ namespace CS438_Mancala
 
         private void Pocket1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Pocket2_Click(object sender, EventArgs e)

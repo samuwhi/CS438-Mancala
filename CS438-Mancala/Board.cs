@@ -13,6 +13,7 @@ namespace CS438_Mancala
 
         public int[,] gameState;
         public int playerTurn;
+        public MancalaGUI mancalaGUI;
 
         public Board()
         {
@@ -97,7 +98,4 @@ namespace CS438_Mancala
 
         }
     }
-
-
-
 }

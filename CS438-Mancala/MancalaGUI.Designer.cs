@@ -43,11 +43,11 @@
             this.Pocket14 = new System.Windows.Forms.Button();
             this.Pocket13 = new System.Windows.Forms.Button();
             this.Player1Box = new System.Windows.Forms.GroupBox();
-            this.Human1Button = new System.Windows.Forms.Button();
-            this.Computer1Button = new System.Windows.Forms.Button();
-            this.Score1Label = new System.Windows.Forms.Label();
-            this.Score1Text = new System.Windows.Forms.Label();
             this.Player1ConsoleWindowCheck = new System.Windows.Forms.CheckBox();
+            this.Score1Text = new System.Windows.Forms.Label();
+            this.Score1Label = new System.Windows.Forms.Label();
+            this.Computer1Button = new System.Windows.Forms.Button();
+            this.Human1Button = new System.Windows.Forms.Button();
             this.Player2Box = new System.Windows.Forms.GroupBox();
             this.Player2ConsoleWindowCheck = new System.Windows.Forms.CheckBox();
             this.Score2Text = new System.Windows.Forms.Label();
@@ -55,12 +55,12 @@
             this.Computer2Button = new System.Windows.Forms.Button();
             this.Human2Button = new System.Windows.Forms.Button();
             this.ControlBox = new System.Windows.Forms.GroupBox();
+            this.StepBackButton = new System.Windows.Forms.Button();
+            this.StepForwardButton = new System.Windows.Forms.Button();
             this.ResetButton = new System.Windows.Forms.Button();
             this.StartButton = new System.Windows.Forms.Button();
-            this.StepForwardButton = new System.Windows.Forms.Button();
-            this.StepBackButton = new System.Windows.Forms.Button();
-            this.CurrentPlayerTurnLabel = new System.Windows.Forms.Label();
-            this.CurrentPlayerTurn = new System.Windows.Forms.Label();
+            this.CurrentPlayersTurnLabel = new System.Windows.Forms.Label();
+            this.CurrentPlayerTurnButton = new System.Windows.Forms.Button();
             this.Player1Box.SuspendLayout();
             this.Player2Box.SuspendLayout();
             this.ControlBox.SuspendLayout();
@@ -68,142 +68,170 @@
             // 
             // Pocket3
             // 
+            this.Pocket3.BackColor = System.Drawing.Color.SteelBlue;
+            this.Pocket3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket3.Location = new System.Drawing.Point(902, 94);
             this.Pocket3.Name = "Pocket3";
             this.Pocket3.Size = new System.Drawing.Size(100, 100);
             this.Pocket3.TabIndex = 3;
             this.Pocket3.Text = "4";
-            this.Pocket3.UseVisualStyleBackColor = true;
+            this.Pocket3.UseVisualStyleBackColor = false;
             this.Pocket3.Click += new System.EventHandler(this.Pocket3_Click);
             // 
             // Pocket4
             // 
+            this.Pocket4.BackColor = System.Drawing.Color.SteelBlue;
+            this.Pocket4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket4.Location = new System.Drawing.Point(783, 94);
             this.Pocket4.Name = "Pocket4";
             this.Pocket4.Size = new System.Drawing.Size(100, 100);
             this.Pocket4.TabIndex = 4;
             this.Pocket4.Text = "4";
-            this.Pocket4.UseVisualStyleBackColor = true;
+            this.Pocket4.UseVisualStyleBackColor = false;
             this.Pocket4.Click += new System.EventHandler(this.Pocket4_Click);
             // 
             // Pocket5
             // 
+            this.Pocket5.BackColor = System.Drawing.Color.SteelBlue;
+            this.Pocket5.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pocket5.Location = new System.Drawing.Point(667, 94);
             this.Pocket5.Name = "Pocket5";
             this.Pocket5.Size = new System.Drawing.Size(100, 100);
             this.Pocket5.TabIndex = 5;
             this.Pocket5.Text = "4";
-            this.Pocket5.UseVisualStyleBackColor = true;
+            this.Pocket5.UseVisualStyleBackColor = false;
             this.Pocket5.Click += new System.EventHandler(this.Pocket5_Click);
             // 
             // Pocket6
             // 
+            this.Pocket6.BackColor = System.Drawing.Color.SteelBlue;
+            this.Pocket6.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pocket6.Location = new System.Drawing.Point(547, 94);
             this.Pocket6.Name = "Pocket6";
             this.Pocket6.Size = new System.Drawing.Size(100, 100);
             this.Pocket6.TabIndex = 6;
             this.Pocket6.Text = "4";
-            this.Pocket6.UseVisualStyleBackColor = true;
+            this.Pocket6.UseVisualStyleBackColor = false;
             this.Pocket6.Click += new System.EventHandler(this.Pocket6_Click);
             // 
             // Pocket7
             // 
+            this.Pocket7.BackColor = System.Drawing.Color.SteelBlue;
+            this.Pocket7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket7.Location = new System.Drawing.Point(427, 205);
             this.Pocket7.Name = "Pocket7";
             this.Pocket7.Size = new System.Drawing.Size(100, 200);
             this.Pocket7.TabIndex = 7;
             this.Pocket7.Text = "0";
-            this.Pocket7.UseVisualStyleBackColor = true;
+            this.Pocket7.UseVisualStyleBackColor = false;
             this.Pocket7.Click += new System.EventHandler(this.Pocket7_Click);
             // 
             // Pocket8
             // 
+            this.Pocket8.BackColor = System.Drawing.Color.OrangeRed;
+            this.Pocket8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket8.Location = new System.Drawing.Point(547, 422);
             this.Pocket8.Name = "Pocket8";
             this.Pocket8.Size = new System.Drawing.Size(100, 100);
             this.Pocket8.TabIndex = 8;
             this.Pocket8.Text = "4";
-            this.Pocket8.UseVisualStyleBackColor = true;
+            this.Pocket8.UseVisualStyleBackColor = false;
             this.Pocket8.Click += new System.EventHandler(this.Pocket8_Click);
             // 
             // Pocket9
             // 
+            this.Pocket9.BackColor = System.Drawing.Color.OrangeRed;
+            this.Pocket9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket9.Location = new System.Drawing.Point(667, 422);
             this.Pocket9.Name = "Pocket9";
             this.Pocket9.Size = new System.Drawing.Size(100, 100);
             this.Pocket9.TabIndex = 9;
             this.Pocket9.Text = "4";
-            this.Pocket9.UseVisualStyleBackColor = true;
+            this.Pocket9.UseVisualStyleBackColor = false;
             this.Pocket9.Click += new System.EventHandler(this.Pocket9_Click);
             // 
             // Pocket10
             // 
+            this.Pocket10.BackColor = System.Drawing.Color.OrangeRed;
+            this.Pocket10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket10.Location = new System.Drawing.Point(783, 422);
             this.Pocket10.Name = "Pocket10";
             this.Pocket10.Size = new System.Drawing.Size(100, 100);
             this.Pocket10.TabIndex = 10;
             this.Pocket10.Text = "4";
-            this.Pocket10.UseVisualStyleBackColor = true;
+            this.Pocket10.UseVisualStyleBackColor = false;
             this.Pocket10.Click += new System.EventHandler(this.Pocket10_Click);
             // 
             // Pocket11
             // 
+            this.Pocket11.BackColor = System.Drawing.Color.OrangeRed;
+            this.Pocket11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket11.Location = new System.Drawing.Point(902, 422);
             this.Pocket11.Name = "Pocket11";
             this.Pocket11.Size = new System.Drawing.Size(100, 100);
             this.Pocket11.TabIndex = 11;
             this.Pocket11.Text = "4";
-            this.Pocket11.UseVisualStyleBackColor = true;
+            this.Pocket11.UseVisualStyleBackColor = false;
             this.Pocket11.Click += new System.EventHandler(this.Pocket11_Click);
             // 
             // Pocket12
             // 
+            this.Pocket12.BackColor = System.Drawing.Color.OrangeRed;
+            this.Pocket12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket12.Location = new System.Drawing.Point(1022, 422);
             this.Pocket12.Name = "Pocket12";
             this.Pocket12.Size = new System.Drawing.Size(100, 100);
             this.Pocket12.TabIndex = 12;
             this.Pocket12.Text = "4";
-            this.Pocket12.UseVisualStyleBackColor = true;
+            this.Pocket12.UseVisualStyleBackColor = false;
             this.Pocket12.Click += new System.EventHandler(this.Pocket12_Click);
             // 
             // Pocket2
             // 
+            this.Pocket2.BackColor = System.Drawing.Color.SteelBlue;
+            this.Pocket2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket2.Location = new System.Drawing.Point(1022, 94);
             this.Pocket2.Name = "Pocket2";
             this.Pocket2.Size = new System.Drawing.Size(100, 100);
             this.Pocket2.TabIndex = 2;
             this.Pocket2.Text = "4";
-            this.Pocket2.UseVisualStyleBackColor = true;
+            this.Pocket2.UseVisualStyleBackColor = false;
             this.Pocket2.Click += new System.EventHandler(this.Pocket2_Click);
             // 
             // Pocket1
             // 
+            this.Pocket1.BackColor = System.Drawing.Color.SteelBlue;
+            this.Pocket1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket1.Location = new System.Drawing.Point(1142, 94);
             this.Pocket1.Name = "Pocket1";
             this.Pocket1.Size = new System.Drawing.Size(100, 100);
             this.Pocket1.TabIndex = 1;
             this.Pocket1.Text = "4";
-            this.Pocket1.UseVisualStyleBackColor = true;
+            this.Pocket1.UseVisualStyleBackColor = false;
             this.Pocket1.Click += new System.EventHandler(this.Pocket1_Click);
             // 
             // Pocket14
             // 
+            this.Pocket14.BackColor = System.Drawing.Color.OrangeRed;
+            this.Pocket14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket14.Location = new System.Drawing.Point(1263, 205);
             this.Pocket14.Name = "Pocket14";
             this.Pocket14.Size = new System.Drawing.Size(100, 200);
             this.Pocket14.TabIndex = 14;
             this.Pocket14.Text = "0";
-            this.Pocket14.UseVisualStyleBackColor = true;
+            this.Pocket14.UseVisualStyleBackColor = false;
             this.Pocket14.Click += new System.EventHandler(this.Pocket14_Click);
             // 
             // Pocket13
             // 
+            this.Pocket13.BackColor = System.Drawing.Color.OrangeRed;
+            this.Pocket13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Pocket13.Location = new System.Drawing.Point(1142, 422);
             this.Pocket13.Name = "Pocket13";
             this.Pocket13.Size = new System.Drawing.Size(100, 100);
             this.Pocket13.TabIndex = 13;
             this.Pocket13.Text = "4";
-            this.Pocket13.UseVisualStyleBackColor = true;
+            this.Pocket13.UseVisualStyleBackColor = false;
             this.Pocket13.Click += new System.EventHandler(this.Pocket13_Click);
             // 
             // Player1Box
@@ -220,34 +248,16 @@
             this.Player1Box.TabStop = false;
             this.Player1Box.Text = "Player 1";
             // 
-            // Human1Button
+            // Player1ConsoleWindowCheck
             // 
-            this.Human1Button.Location = new System.Drawing.Point(6, 21);
-            this.Human1Button.Name = "Human1Button";
-            this.Human1Button.Size = new System.Drawing.Size(130, 23);
-            this.Human1Button.TabIndex = 0;
-            this.Human1Button.Text = "Human";
-            this.Human1Button.UseVisualStyleBackColor = true;
-            this.Human1Button.Click += new System.EventHandler(this.Human1Button_Click);
-            // 
-            // Computer1Button
-            // 
-            this.Computer1Button.Location = new System.Drawing.Point(177, 21);
-            this.Computer1Button.Name = "Computer1Button";
-            this.Computer1Button.Size = new System.Drawing.Size(130, 23);
-            this.Computer1Button.TabIndex = 1;
-            this.Computer1Button.Text = "Computer";
-            this.Computer1Button.UseVisualStyleBackColor = true;
-            this.Computer1Button.Click += new System.EventHandler(this.Computer1Button_Click);
-            // 
-            // Score1Label
-            // 
-            this.Score1Label.AutoSize = true;
-            this.Score1Label.Location = new System.Drawing.Point(3, 56);
-            this.Score1Label.Name = "Score1Label";
-            this.Score1Label.Size = new System.Drawing.Size(46, 16);
-            this.Score1Label.TabIndex = 2;
-            this.Score1Label.Text = "Score:";
+            this.Player1ConsoleWindowCheck.AutoSize = true;
+            this.Player1ConsoleWindowCheck.Location = new System.Drawing.Point(6, 123);
+            this.Player1ConsoleWindowCheck.Name = "Player1ConsoleWindowCheck";
+            this.Player1ConsoleWindowCheck.Size = new System.Drawing.Size(225, 20);
+            this.Player1ConsoleWindowCheck.TabIndex = 4;
+            this.Player1ConsoleWindowCheck.Text = "Show Player1\'s Console Window";
+            this.Player1ConsoleWindowCheck.UseVisualStyleBackColor = true;
+            this.Player1ConsoleWindowCheck.CheckedChanged += new System.EventHandler(this.Player1ConsoleWindowCheck_CheckedChanged);
             // 
             // Score1Text
             // 
@@ -259,16 +269,34 @@
             this.Score1Text.Text = "0";
             this.Score1Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Player1ConsoleWindowCheck
+            // Score1Label
             // 
-            this.Player1ConsoleWindowCheck.AutoSize = true;
-            this.Player1ConsoleWindowCheck.Location = new System.Drawing.Point(6, 123);
-            this.Player1ConsoleWindowCheck.Name = "Player1ConsoleWindowCheck";
-            this.Player1ConsoleWindowCheck.Size = new System.Drawing.Size(225, 20);
-            this.Player1ConsoleWindowCheck.TabIndex = 4;
-            this.Player1ConsoleWindowCheck.Text = "Show Player1\'s Console Window";
-            this.Player1ConsoleWindowCheck.UseVisualStyleBackColor = true;
-            this.Player1ConsoleWindowCheck.CheckedChanged += new System.EventHandler(this.Player1ConsoleWindowCheck_CheckedChanged);
+            this.Score1Label.AutoSize = true;
+            this.Score1Label.Location = new System.Drawing.Point(3, 56);
+            this.Score1Label.Name = "Score1Label";
+            this.Score1Label.Size = new System.Drawing.Size(46, 16);
+            this.Score1Label.TabIndex = 2;
+            this.Score1Label.Text = "Score:";
+            // 
+            // Computer1Button
+            // 
+            this.Computer1Button.Location = new System.Drawing.Point(177, 21);
+            this.Computer1Button.Name = "Computer1Button";
+            this.Computer1Button.Size = new System.Drawing.Size(130, 23);
+            this.Computer1Button.TabIndex = 1;
+            this.Computer1Button.Text = "Computer";
+            this.Computer1Button.UseVisualStyleBackColor = true;
+            this.Computer1Button.Click += new System.EventHandler(this.Computer1Button_Click);
+            // 
+            // Human1Button
+            // 
+            this.Human1Button.Location = new System.Drawing.Point(6, 21);
+            this.Human1Button.Name = "Human1Button";
+            this.Human1Button.Size = new System.Drawing.Size(130, 23);
+            this.Human1Button.TabIndex = 0;
+            this.Human1Button.Text = "Human";
+            this.Human1Button.UseVisualStyleBackColor = true;
+            this.Human1Button.Click += new System.EventHandler(this.Human1Button_Click);
             // 
             // Player2Box
             // 
@@ -337,8 +365,6 @@
             // 
             // ControlBox
             // 
-            this.ControlBox.Controls.Add(this.CurrentPlayerTurn);
-            this.ControlBox.Controls.Add(this.CurrentPlayerTurnLabel);
             this.ControlBox.Controls.Add(this.StepBackButton);
             this.ControlBox.Controls.Add(this.StepForwardButton);
             this.ControlBox.Controls.Add(this.ResetButton);
@@ -350,6 +376,26 @@
             this.ControlBox.TabIndex = 17;
             this.ControlBox.TabStop = false;
             this.ControlBox.Text = "Control";
+            // 
+            // StepBackButton
+            // 
+            this.StepBackButton.Location = new System.Drawing.Point(6, 131);
+            this.StepBackButton.Name = "StepBackButton";
+            this.StepBackButton.Size = new System.Drawing.Size(167, 27);
+            this.StepBackButton.TabIndex = 3;
+            this.StepBackButton.Text = "Step Backward in Log";
+            this.StepBackButton.UseVisualStyleBackColor = true;
+            this.StepBackButton.Click += new System.EventHandler(this.StepBackButton_Click);
+            // 
+            // StepForwardButton
+            // 
+            this.StepForwardButton.Location = new System.Drawing.Point(6, 83);
+            this.StepForwardButton.Name = "StepForwardButton";
+            this.StepForwardButton.Size = new System.Drawing.Size(167, 27);
+            this.StepForwardButton.TabIndex = 2;
+            this.StepForwardButton.Text = "Step Forward in Log";
+            this.StepForwardButton.UseVisualStyleBackColor = true;
+            this.StepForwardButton.Click += new System.EventHandler(this.StepForwardButton_Click);
             // 
             // ResetButton
             // 
@@ -371,49 +417,32 @@
             this.StartButton.UseVisualStyleBackColor = true;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
-            // StepForwardButton
+            // CurrentPlayersTurnLabel
             // 
-            this.StepForwardButton.Location = new System.Drawing.Point(6, 119);
-            this.StepForwardButton.Name = "StepForwardButton";
-            this.StepForwardButton.Size = new System.Drawing.Size(167, 27);
-            this.StepForwardButton.TabIndex = 2;
-            this.StepForwardButton.Text = "Step Forward in Log";
-            this.StepForwardButton.UseVisualStyleBackColor = true;
-            this.StepForwardButton.Click += new System.EventHandler(this.StepForwardButton_Click);
+            this.CurrentPlayersTurnLabel.AutoSize = true;
+            this.CurrentPlayersTurnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.CurrentPlayersTurnLabel.Location = new System.Drawing.Point(580, 286);
+            this.CurrentPlayersTurnLabel.Name = "CurrentPlayersTurnLabel";
+            this.CurrentPlayersTurnLabel.Size = new System.Drawing.Size(356, 39);
+            this.CurrentPlayersTurnLabel.TabIndex = 18;
+            this.CurrentPlayersTurnLabel.Text = "Current Player\'s Turn: ";
             // 
-            // StepBackButton
+            // CurrentPlayerTurnButton
             // 
-            this.StepBackButton.Location = new System.Drawing.Point(6, 152);
-            this.StepBackButton.Name = "StepBackButton";
-            this.StepBackButton.Size = new System.Drawing.Size(167, 27);
-            this.StepBackButton.TabIndex = 3;
-            this.StepBackButton.Text = "Step Backward in Log";
-            this.StepBackButton.UseVisualStyleBackColor = true;
-            this.StepBackButton.Click += new System.EventHandler(this.StepBackButton_Click);
-            // 
-            // CurrentPlayerTurnLabel
-            // 
-            this.CurrentPlayerTurnLabel.AutoSize = true;
-            this.CurrentPlayerTurnLabel.Location = new System.Drawing.Point(5, 81);
-            this.CurrentPlayerTurnLabel.Name = "CurrentPlayerTurnLabel";
-            this.CurrentPlayerTurnLabel.Size = new System.Drawing.Size(131, 16);
-            this.CurrentPlayerTurnLabel.TabIndex = 4;
-            this.CurrentPlayerTurnLabel.Text = "Current Player\'s turn: ";
-            // 
-            // CurrentPlayerTurn
-            // 
-            this.CurrentPlayerTurn.AutoSize = true;
-            this.CurrentPlayerTurn.Location = new System.Drawing.Point(142, 81);
-            this.CurrentPlayerTurn.Name = "CurrentPlayerTurn";
-            this.CurrentPlayerTurn.Size = new System.Drawing.Size(14, 16);
-            this.CurrentPlayerTurn.TabIndex = 5;
-            this.CurrentPlayerTurn.Text = "1";
+            this.CurrentPlayerTurnButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.CurrentPlayerTurnButton.Location = new System.Drawing.Point(942, 257);
+            this.CurrentPlayerTurnButton.Name = "CurrentPlayerTurnButton";
+            this.CurrentPlayerTurnButton.Size = new System.Drawing.Size(100, 100);
+            this.CurrentPlayerTurnButton.TabIndex = 19;
+            this.CurrentPlayerTurnButton.UseVisualStyleBackColor = false;
             // 
             // MancalaGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1387, 645);
+            this.Controls.Add(this.CurrentPlayerTurnButton);
+            this.Controls.Add(this.CurrentPlayersTurnLabel);
             this.Controls.Add(this.ControlBox);
             this.Controls.Add(this.Player2Box);
             this.Controls.Add(this.Player1Box);
@@ -439,8 +468,8 @@
             this.Player2Box.ResumeLayout(false);
             this.Player2Box.PerformLayout();
             this.ControlBox.ResumeLayout(false);
-            this.ControlBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -472,12 +501,12 @@
         private System.Windows.Forms.Button Computer2Button;
         private System.Windows.Forms.Button Human2Button;
         private System.Windows.Forms.GroupBox ControlBox;
-        private System.Windows.Forms.Label CurrentPlayerTurnLabel;
         private System.Windows.Forms.Button StepBackButton;
         private System.Windows.Forms.Button StepForwardButton;
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.Button StartButton;
-        private System.Windows.Forms.Label CurrentPlayerTurn;
+        private System.Windows.Forms.Label CurrentPlayersTurnLabel;
+        private System.Windows.Forms.Button CurrentPlayerTurnButton;
     }
 }
 

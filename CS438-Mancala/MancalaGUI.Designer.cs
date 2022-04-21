@@ -50,7 +50,7 @@
             this.Pocket3.Name = "Pocket3";
             this.Pocket3.Size = new System.Drawing.Size(100, 100);
             this.Pocket3.TabIndex = 3;
-            this.Pocket3.Text = "Pocket";
+            this.Pocket3.Text = "4";
             this.Pocket3.UseVisualStyleBackColor = true;
             this.Pocket3.Click += new System.EventHandler(this.Pocket3_Click);
             // 
@@ -60,7 +60,7 @@
             this.Pocket4.Name = "Pocket4";
             this.Pocket4.Size = new System.Drawing.Size(100, 100);
             this.Pocket4.TabIndex = 4;
-            this.Pocket4.Text = "Pocket";
+            this.Pocket4.Text = "4";
             this.Pocket4.UseVisualStyleBackColor = true;
             this.Pocket4.Click += new System.EventHandler(this.Pocket4_Click);
             // 
@@ -70,7 +70,7 @@
             this.Pocket5.Name = "Pocket5";
             this.Pocket5.Size = new System.Drawing.Size(100, 100);
             this.Pocket5.TabIndex = 5;
-            this.Pocket5.Text = "Pocket";
+            this.Pocket5.Text = "4";
             this.Pocket5.UseVisualStyleBackColor = true;
             this.Pocket5.Click += new System.EventHandler(this.Pocket5_Click);
             // 
@@ -80,7 +80,7 @@
             this.Pocket6.Name = "Pocket6";
             this.Pocket6.Size = new System.Drawing.Size(100, 100);
             this.Pocket6.TabIndex = 6;
-            this.Pocket6.Text = "Pocket";
+            this.Pocket6.Text = "4";
             this.Pocket6.UseVisualStyleBackColor = true;
             this.Pocket6.Click += new System.EventHandler(this.Pocket6_Click);
             // 
@@ -90,7 +90,7 @@
             this.Pocket7.Name = "Pocket7";
             this.Pocket7.Size = new System.Drawing.Size(100, 200);
             this.Pocket7.TabIndex = 7;
-            this.Pocket7.Text = "Pocket";
+            this.Pocket7.Text = "0";
             this.Pocket7.UseVisualStyleBackColor = true;
             this.Pocket7.Click += new System.EventHandler(this.Pocket7_Click);
             // 
@@ -100,7 +100,7 @@
             this.Pocket8.Name = "Pocket8";
             this.Pocket8.Size = new System.Drawing.Size(100, 100);
             this.Pocket8.TabIndex = 8;
-            this.Pocket8.Text = "Pocket";
+            this.Pocket8.Text = "4";
             this.Pocket8.UseVisualStyleBackColor = true;
             this.Pocket8.Click += new System.EventHandler(this.Pocket8_Click);
             // 
@@ -110,7 +110,7 @@
             this.Pocket9.Name = "Pocket9";
             this.Pocket9.Size = new System.Drawing.Size(100, 100);
             this.Pocket9.TabIndex = 9;
-            this.Pocket9.Text = "Pocket";
+            this.Pocket9.Text = "4";
             this.Pocket9.UseVisualStyleBackColor = true;
             this.Pocket9.Click += new System.EventHandler(this.Pocket9_Click);
             // 
@@ -120,7 +120,7 @@
             this.Pocket10.Name = "Pocket10";
             this.Pocket10.Size = new System.Drawing.Size(100, 100);
             this.Pocket10.TabIndex = 10;
-            this.Pocket10.Text = "Pocket";
+            this.Pocket10.Text = "4";
             this.Pocket10.UseVisualStyleBackColor = true;
             this.Pocket10.Click += new System.EventHandler(this.Pocket10_Click);
             // 
@@ -130,7 +130,7 @@
             this.Pocket11.Name = "Pocket11";
             this.Pocket11.Size = new System.Drawing.Size(100, 100);
             this.Pocket11.TabIndex = 11;
-            this.Pocket11.Text = "Pocket";
+            this.Pocket11.Text = "4";
             this.Pocket11.UseVisualStyleBackColor = true;
             this.Pocket11.Click += new System.EventHandler(this.Pocket11_Click);
             // 
@@ -140,7 +140,7 @@
             this.Pocket12.Name = "Pocket12";
             this.Pocket12.Size = new System.Drawing.Size(100, 100);
             this.Pocket12.TabIndex = 12;
-            this.Pocket12.Text = "Pocket";
+            this.Pocket12.Text = "4";
             this.Pocket12.UseVisualStyleBackColor = true;
             this.Pocket12.Click += new System.EventHandler(this.Pocket12_Click);
             // 
@@ -150,7 +150,7 @@
             this.Pocket2.Name = "Pocket2";
             this.Pocket2.Size = new System.Drawing.Size(100, 100);
             this.Pocket2.TabIndex = 2;
-            this.Pocket2.Text = "Pocket";
+            this.Pocket2.Text = "4";
             this.Pocket2.UseVisualStyleBackColor = true;
             // 
             // Pocket1
@@ -159,7 +159,7 @@
             this.Pocket1.Name = "Pocket1";
             this.Pocket1.Size = new System.Drawing.Size(100, 100);
             this.Pocket1.TabIndex = 1;
-            this.Pocket1.Text = "Pocket";
+            this.Pocket1.Text = "4";
             this.Pocket1.UseVisualStyleBackColor = true;
             // 
             // Pocket14
@@ -168,7 +168,7 @@
             this.Pocket14.Name = "Pocket14";
             this.Pocket14.Size = new System.Drawing.Size(100, 200);
             this.Pocket14.TabIndex = 14;
-            this.Pocket14.Text = "Pocket";
+            this.Pocket14.Text = "0";
             this.Pocket14.UseVisualStyleBackColor = true;
             // 
             // Pocket13
@@ -177,7 +177,7 @@
             this.Pocket13.Name = "Pocket13";
             this.Pocket13.Size = new System.Drawing.Size(100, 100);
             this.Pocket13.TabIndex = 13;
-            this.Pocket13.Text = "Pocket";
+            this.Pocket13.Text = "4";
             this.Pocket13.UseVisualStyleBackColor = true;
             // 
             // MancalaGUI

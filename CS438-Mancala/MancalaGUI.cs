@@ -43,33 +43,33 @@ namespace CS438_Mancala
 
         private void Pocket1_Click(object sender, EventArgs e)
         {
-            board.makeMove(1);
+            board.makeMove(6);
             Update_Pockets();
         }
 
         private void Pocket2_Click(object sender, EventArgs e)
         {
-            board.makeMove(2);
+            board.makeMove(5);
         }
 
         private void Pocket3_Click(object sender, EventArgs e)
         {
-            board.makeMove(3);
+            board.makeMove(4);
         }
 
         private void Pocket4_Click(object sender, EventArgs e)
         {
-            board.makeMove(4);
+            board.makeMove(3);
         }
 
         private void Pocket5_Click(object sender, EventArgs e)
         {
-            board.makeMove(5);
+            board.makeMove(2);
         }
 
         private void Pocket6_Click(object sender, EventArgs e)
         {
-            board.makeMove(6);
+            board.makeMove(1);
         }
 
         private void Pocket7_Click(object sender, EventArgs e)
@@ -79,32 +79,32 @@ namespace CS438_Mancala
 
         private void Pocket8_Click(object sender, EventArgs e)
         {
-
+            board.makeMove(1);
         }
 
         private void Pocket9_Click(object sender, EventArgs e)
         {
-
+            board.makeMove(2);
         }
 
         private void Pocket10_Click(object sender, EventArgs e)
         {
-
+            board.makeMove(3);
         }
 
         private void Pocket11_Click(object sender, EventArgs e)
         {
-
+            board.makeMove(4);
         }
 
         private void Pocket12_Click(object sender, EventArgs e)
         {
-
+            board.makeMove(5);
         }
 
         private void Pocket13_Click(object sender, EventArgs e)
         {
-
+            board.makeMove(6);
         }
 
         private void Pocket14_Click(object sender, EventArgs e)

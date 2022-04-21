@@ -12,6 +12,10 @@ namespace CS438_Mancala
 {
     public partial class MancalaGUI : Form
     {
+        public string fileName1;
+        public string fileName2;
+        public int playerTurn = 1;
+
         public Board board;
         public Button[] player1Pockets;
         public Button[] player2Pockets;
@@ -33,8 +37,23 @@ namespace CS438_Mancala
             {
                 this.player2Pockets[i].Text = this.board.gameState[1, i].ToString();
             }
+
+            Update_Current_Turn();
         }
 
+        private void Update_Current_Turn()
+        {
+            if (playerTurn == 1)
+            {
+                playerTurn = 2;
+                CurrentPlayerTurnButton.BackColor = Color.OrangeRed;
+            }
+            else
+            {
+                playerTurn = 1;
+                CurrentPlayerTurnButton.BackColor = Color.SteelBlue;
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -48,67 +67,67 @@ namespace CS438_Mancala
 
         private void Pocket2_Click(object sender, EventArgs e)
         {
-
+            Update_Pockets();
         }
 
         private void Pocket3_Click(object sender, EventArgs e)
         {
-
+            Update_Pockets();
         }
 
         private void Pocket4_Click(object sender, EventArgs e)
         {
-
+            Update_Pockets();
         }
 
         private void Pocket5_Click(object sender, EventArgs e)
         {
-
+            Update_Pockets();
         }
 
         private void Pocket6_Click(object sender, EventArgs e)
         {
-
+            Update_Pockets();
         }
 
         private void Pocket7_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Pocket8_Click(object sender, EventArgs e)
         {
-
+            Update_Pockets();
         }
 
         private void Pocket9_Click(object sender, EventArgs e)
         {
-
+            Update_Pockets();
         }
 
         private void Pocket10_Click(object sender, EventArgs e)
         {
-
+            Update_Pockets();
         }
 
         private void Pocket11_Click(object sender, EventArgs e)
         {
-
+            Update_Pockets();
         }
 
         private void Pocket12_Click(object sender, EventArgs e)
         {
-
+            Update_Pockets();
         }
 
         private void Pocket13_Click(object sender, EventArgs e)
         {
-
+            Update_Pockets();
         }
 
         private void Pocket14_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Human1Button_Click(object sender, EventArgs e)
@@ -118,7 +137,14 @@ namespace CS438_Mancala
 
         private void Computer1Button_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Exe Files (.exe)|*.exe|All Files (*.*)|*.*";
 
+            DialogResult result = openFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                fileName1 = openFileDialog.FileName;
+            }
         }
 
         private void Player1ConsoleWindowCheck_CheckedChanged(object sender, EventArgs e)
@@ -133,7 +159,14 @@ namespace CS438_Mancala
 
         private void Computer2Button_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Exe Files (.exe)|*.exe|All Files (*.*)|*.*";
 
+            DialogResult result = openFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                fileName2 = openFileDialog.FileName;
+            }
         }
 
         private void Player2ConsoleWindowCheck_CheckedChanged(object sender, EventArgs e)

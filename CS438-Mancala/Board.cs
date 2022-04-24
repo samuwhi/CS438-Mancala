@@ -133,6 +133,15 @@ namespace CS438_Mancala
                         col++;
 
                     gameState[row, col] += 1;
+
+                    if (gameState[row, col] == 1 && gameState[1, col - 1] > 0 && i == stones - 1)
+                    {
+                        gameState[row, 0] += gameState[1, col - 1];
+                        gameState[1, col - 1] = 0;
+                        gameState[row, 0] += gameState[row, col];
+                        gameState[row, col]--;
+                    }
+
                     goAgain = ((col == 0 && row == 0) ? true : false);
                 }
 
@@ -148,6 +157,15 @@ namespace CS438_Mancala
                         col--;
 
                     gameState[row, col] += 1;
+
+                    if (gameState[row, col] == 1 && gameState[0, col + 1] > 0 && i == stones - 1)
+                    {
+                        gameState[row, 6] += gameState[0, col + 1];
+                        gameState[0, col + 1] = 0;
+                        gameState[row, 6] += gameState[row, col];
+                        gameState[row, col]--;
+                    }
+
                     goAgain = ((col == 6 && row == 1) ? true : false);
                 } // If
             } // For

@@ -17,7 +17,7 @@ namespace CS438_Mancala
         public string fileName1 = "";
         public string fileName2 = "";
 
-        private int currentPlayerTurn = 0;
+        private bool startButtonHasBeenPressed = false;
 
         public Board board;
         public Button[] player1Pockets;
@@ -32,6 +32,7 @@ namespace CS438_Mancala
 
         private void Update_Pockets()
         {
+            //Make Move
             for (int i = 0; i < player1Pockets.Length; i++)
             {
                 player1Pockets[i].Text = board.gameState[0, i].ToString();
@@ -41,15 +42,39 @@ namespace CS438_Mancala
                 player2Pockets[i].Text = board.gameState[1, i].ToString();
             }
 
+            //Update Score
+            Score1Text.Text = board.gameState[0, 0].ToString();
+            Score2Text.Text = board.gameState[1, 6].ToString();
+
+            //Change Turn Color
             if (board.playerTurn == 0)
             {
                 CurrentPlayerTurnButton.BackColor = Color.SteelBlue;
-                currentPlayerTurn = 0;
             }
             else
             {
                 CurrentPlayerTurnButton.BackColor = Color.OrangeRed;
-                currentPlayerTurn = 1;
+            }
+        }
+
+        private bool Allow_Button(int turnToCheck)
+        {
+            if (!startButtonHasBeenPressed)
+            {
+                return false;
+            }
+
+            if (board.playerTurn == turnToCheck && HumanComputerLabel1.Text == "Human")
+            {
+                return true;
+            }
+            else if (board.playerTurn == turnToCheck && HumanComputerLabel2.Text == "Human")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
@@ -60,7 +85,7 @@ namespace CS438_Mancala
 
         private void Pocket1_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 0)
+            if (Allow_Button(0))
             {
                 board.makeMove(6);
                 board.Log_Move(6);
@@ -70,7 +95,7 @@ namespace CS438_Mancala
 
         private void Pocket2_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 0)
+            if (Allow_Button(0))
             {
                 board.makeMove(5);
                 board.Log_Move(5);
@@ -80,7 +105,7 @@ namespace CS438_Mancala
 
         private void Pocket3_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 0)
+            if (Allow_Button(0))
             {
                 board.makeMove(4);
                 board.Log_Move(4);
@@ -90,7 +115,7 @@ namespace CS438_Mancala
 
         private void Pocket4_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 0)
+            if (Allow_Button(0))
             {
                 board.makeMove(3);
                 board.Log_Move(3);
@@ -100,7 +125,7 @@ namespace CS438_Mancala
 
         private void Pocket5_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 0)
+            if (Allow_Button(0))
             {
                 board.makeMove(2);
                 board.Log_Move(2);
@@ -110,7 +135,7 @@ namespace CS438_Mancala
 
         private void Pocket6_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 0)
+            if (Allow_Button(0))
             {
                 board.makeMove(1);
                 board.Log_Move(1);
@@ -125,7 +150,7 @@ namespace CS438_Mancala
 
         private void Pocket8_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 1)
+            if (Allow_Button(1))
             {
                 board.makeMove(1);
                 board.Log_Move(1);
@@ -135,7 +160,7 @@ namespace CS438_Mancala
 
         private void Pocket9_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 1)
+            if (Allow_Button(1))
             {
                 board.makeMove(2);
                 board.Log_Move(2);
@@ -145,7 +170,7 @@ namespace CS438_Mancala
 
         private void Pocket10_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 1)
+            if (Allow_Button(1))
             {
                 board.makeMove(3);
                 board.Log_Move(3);
@@ -155,7 +180,7 @@ namespace CS438_Mancala
 
         private void Pocket11_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 1)
+            if (Allow_Button(1))
             {
                 board.makeMove(4);
                 board.Log_Move(4);
@@ -165,7 +190,7 @@ namespace CS438_Mancala
 
         private void Pocket12_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 1)
+            if (Allow_Button(1))
             {
                 board.makeMove(5);
                 board.Log_Move(5);
@@ -175,7 +200,7 @@ namespace CS438_Mancala
 
         private void Pocket13_Click(object sender, EventArgs e)
         {
-            if (board.playerTurn == 1)
+            if (Allow_Button(1))
             {
                 board.makeMove(6);
                 board.Log_Move(6);
@@ -190,7 +215,7 @@ namespace CS438_Mancala
 
         private void Human1Button_Click(object sender, EventArgs e)
         {
-
+            HumanComputerLabel1.Text = "Human";
         }
 
         private void Computer1Button_Click(object sender, EventArgs e)
@@ -202,6 +227,7 @@ namespace CS438_Mancala
             if (result == DialogResult.OK)
             {
                 fileName1 = openFileDialog.FileName;
+                HumanComputerLabel1.Text = fileName1;
             }
         }
 
@@ -212,7 +238,7 @@ namespace CS438_Mancala
 
         private void Human2Button_Click(object sender, EventArgs e)
         {
-
+            HumanComputerLabel2.Text = "Human";
         }
 
         private void Computer2Button_Click(object sender, EventArgs e)
@@ -224,6 +250,7 @@ namespace CS438_Mancala
             if (result == DialogResult.OK)
             {
                 fileName2 = openFileDialog.FileName;
+                HumanComputerLabel2.Text = fileName2;
             }
         }
 
@@ -234,6 +261,9 @@ namespace CS438_Mancala
 
         private void StartButton_Click(object sender, EventArgs e)
         {
+            startButtonHasBeenPressed = true;
+            CurrentPlayerTurnButton.BackColor = Color.SteelBlue;
+
             //This needs fixed, got to wait for whoevers turn to be over with before starting up.
             if (fileName1 != "")
             {

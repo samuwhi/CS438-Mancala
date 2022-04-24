@@ -43,12 +43,14 @@
             this.Pocket14 = new System.Windows.Forms.Button();
             this.Pocket13 = new System.Windows.Forms.Button();
             this.Player1Box = new System.Windows.Forms.GroupBox();
+            this.HumanComputerLabel1 = new System.Windows.Forms.Label();
             this.Player1ConsoleWindowCheck = new System.Windows.Forms.CheckBox();
             this.Score1Text = new System.Windows.Forms.Label();
             this.Score1Label = new System.Windows.Forms.Label();
             this.Computer1Button = new System.Windows.Forms.Button();
             this.Human1Button = new System.Windows.Forms.Button();
             this.Player2Box = new System.Windows.Forms.GroupBox();
+            this.HumanComputerLabel2 = new System.Windows.Forms.Label();
             this.Player2ConsoleWindowCheck = new System.Windows.Forms.CheckBox();
             this.Score2Text = new System.Windows.Forms.Label();
             this.Score2Label = new System.Windows.Forms.Label();
@@ -236,6 +238,7 @@
             // 
             // Player1Box
             // 
+            this.Player1Box.Controls.Add(this.HumanComputerLabel1);
             this.Player1Box.Controls.Add(this.Player1ConsoleWindowCheck);
             this.Player1Box.Controls.Add(this.Score1Text);
             this.Player1Box.Controls.Add(this.Score1Label);
@@ -247,6 +250,15 @@
             this.Player1Box.TabIndex = 15;
             this.Player1Box.TabStop = false;
             this.Player1Box.Text = "Player 1";
+            // 
+            // HumanComputerLabel1
+            // 
+            this.HumanComputerLabel1.AutoSize = true;
+            this.HumanComputerLabel1.Location = new System.Drawing.Point(8, 47);
+            this.HumanComputerLabel1.Name = "HumanComputerLabel1";
+            this.HumanComputerLabel1.Size = new System.Drawing.Size(50, 16);
+            this.HumanComputerLabel1.TabIndex = 6;
+            this.HumanComputerLabel1.Text = "Human";
             // 
             // Player1ConsoleWindowCheck
             // 
@@ -262,7 +274,7 @@
             // Score1Text
             // 
             this.Score1Text.AutoSize = true;
-            this.Score1Text.Location = new System.Drawing.Point(55, 56);
+            this.Score1Text.Location = new System.Drawing.Point(58, 63);
             this.Score1Text.Name = "Score1Text";
             this.Score1Text.Size = new System.Drawing.Size(14, 16);
             this.Score1Text.TabIndex = 3;
@@ -272,7 +284,7 @@
             // Score1Label
             // 
             this.Score1Label.AutoSize = true;
-            this.Score1Label.Location = new System.Drawing.Point(3, 56);
+            this.Score1Label.Location = new System.Drawing.Point(10, 64);
             this.Score1Label.Name = "Score1Label";
             this.Score1Label.Size = new System.Drawing.Size(46, 16);
             this.Score1Label.TabIndex = 2;
@@ -300,6 +312,7 @@
             // 
             // Player2Box
             // 
+            this.Player2Box.Controls.Add(this.HumanComputerLabel2);
             this.Player2Box.Controls.Add(this.Player2ConsoleWindowCheck);
             this.Player2Box.Controls.Add(this.Score2Text);
             this.Player2Box.Controls.Add(this.Score2Label);
@@ -312,6 +325,15 @@
             this.Player2Box.TabIndex = 16;
             this.Player2Box.TabStop = false;
             this.Player2Box.Text = "Player 2";
+            // 
+            // HumanComputerLabel2
+            // 
+            this.HumanComputerLabel2.AutoSize = true;
+            this.HumanComputerLabel2.Location = new System.Drawing.Point(6, 47);
+            this.HumanComputerLabel2.Name = "HumanComputerLabel2";
+            this.HumanComputerLabel2.Size = new System.Drawing.Size(50, 16);
+            this.HumanComputerLabel2.TabIndex = 5;
+            this.HumanComputerLabel2.Text = "Human";
             // 
             // Player2ConsoleWindowCheck
             // 
@@ -327,7 +349,7 @@
             // Score2Text
             // 
             this.Score2Text.AutoSize = true;
-            this.Score2Text.Location = new System.Drawing.Point(55, 56);
+            this.Score2Text.Location = new System.Drawing.Point(58, 63);
             this.Score2Text.Name = "Score2Text";
             this.Score2Text.Size = new System.Drawing.Size(14, 16);
             this.Score2Text.TabIndex = 3;
@@ -337,7 +359,7 @@
             // Score2Label
             // 
             this.Score2Label.AutoSize = true;
-            this.Score2Label.Location = new System.Drawing.Point(3, 56);
+            this.Score2Label.Location = new System.Drawing.Point(6, 63);
             this.Score2Label.Name = "Score2Label";
             this.Score2Label.Size = new System.Drawing.Size(46, 16);
             this.Score2Label.TabIndex = 2;
@@ -429,7 +451,7 @@
             // 
             // CurrentPlayerTurnButton
             // 
-            this.CurrentPlayerTurnButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.CurrentPlayerTurnButton.BackColor = System.Drawing.Color.LightGray;
             this.CurrentPlayerTurnButton.Location = new System.Drawing.Point(954, 257);
             this.CurrentPlayerTurnButton.Name = "CurrentPlayerTurnButton";
             this.CurrentPlayerTurnButton.Size = new System.Drawing.Size(100, 100);
@@ -507,6 +529,8 @@
         private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.Label CurrentPlayersTurnLabel;
         private System.Windows.Forms.Button CurrentPlayerTurnButton;
+        private System.Windows.Forms.Label HumanComputerLabel1;
+        private System.Windows.Forms.Label HumanComputerLabel2;
     }
 }
 

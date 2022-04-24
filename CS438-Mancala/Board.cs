@@ -13,7 +13,6 @@ namespace CS438_Mancala
 
         public int[,] gameState;
         public int playerTurn;
-        public MancalaGUI mancalaGUI;
 
         public Board()
         {
@@ -28,6 +27,12 @@ namespace CS438_Mancala
             }
             var outFile = File.CreateText(LOGFILENAME);
             outFile.Close();
+        }
+
+        public void Get_Current_Board(ref int[,] gameState, ref int playerTurn)
+        {
+            gameState = this.gameState;
+            playerTurn = this.playerTurn;
         }
 
         public void Log_Move(int pocket)
@@ -58,9 +63,15 @@ namespace CS438_Mancala
             if (playerTurn == 1) {
                 pocket--;
             }
+
             int stones = gameState[playerTurn, pocket];
             int row = playerTurn;
             int col = pocket;
+
+            if (stones == 0)    //checks to see if player clicks pocket with no stones. If so, returns.
+            {
+                return;
+            }
 
             gameState[playerTurn, pocket] = 0;
             for(int i = 0; i < stones; i++) {

@@ -26,23 +26,8 @@ namespace CS438_Mancala
         {
             InitializeComponent();
             board = new Board();
-            board.mancalaGUI = this;
             player1Pockets = new Button[] { Pocket7, Pocket6, Pocket5, Pocket4, Pocket3, Pocket2, Pocket1 };
             player2Pockets = new Button[] { Pocket8, Pocket9, Pocket10, Pocket11, Pocket12, Pocket13, Pocket14 };
-        }
-
-        public void Get_Current_Board(ref int[,] gameState, ref int playerTurn) //Call with: mancalaGUI.Get_Current_Board(ref gameState, ref playerTurn);
-        {
-            for (int i = 0; i < player1Pockets.Length; ++i)
-            {
-                gameState[0, i] = Int32.Parse(player1Pockets[i].Text);
-            }
-            for (int i = 0; i < player2Pockets.Length; ++i)
-            {
-                gameState[1, i] = Int32.Parse(player2Pockets[i].Text);
-            }
-
-            playerTurn = currentPlayerTurn;
         }
 
         private void Update_Pockets()

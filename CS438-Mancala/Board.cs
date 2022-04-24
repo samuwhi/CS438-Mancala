@@ -67,6 +67,7 @@ namespace CS438_Mancala
             int stones = gameState[playerTurn, pocket];
             int row = playerTurn;
             int col = pocket;
+            bool goAgain = false;
 
             if (stones == 0)    //checks to see if player clicks pocket with no stones. If so, returns.
             {
@@ -87,7 +88,7 @@ namespace CS438_Mancala
                         col++;
 
                     gameState[row, col] += 1;
-                   
+                    goAgain = (col == 0 ? true : false);
                 }
 
                 if (playerTurn == 1) {
@@ -102,11 +103,12 @@ namespace CS438_Mancala
                         col--;
 
                     gameState[row, col] += 1;
-                    
+                    goAgain = (col == 6 ? true : false);
                 }
             }
-            changeTurn();
-
+            if (!goAgain) {
+                changeTurn();
+            }
         }
     }
 }

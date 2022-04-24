@@ -13,6 +13,7 @@ namespace CS438_Mancala
 
         public int[,] gameState;
         public int playerTurn;
+        public bool gameEnd = false;
 
         public Board()
         {
@@ -56,6 +57,47 @@ namespace CS438_Mancala
             {
                 playerTurn = 0;
             }
+        }
+
+        private bool emptyBoard()
+        {
+            int sum = 0;
+            int finalStones = 0;
+            bool boardEmptied = false;
+
+            if (playerTurn == 0)
+            {
+                for (int i = 1; i < gameState.GetLength(0); i++)
+                {
+                    sum += gameState[playerTurn, i];
+                }
+                if (sum == 0)
+                {
+                    boardEmptied = true;
+                    for (int i = 0; i < gameState.GetLength(1) - 1; i++)
+                    {
+                        finalStones += gameState[1, i];
+                    }
+                    gameState[1, 6] += finalStones;
+                }
+            }
+            if (playerTurn == 1)
+            {
+                for (int i = 0; i < gameState.GetLength(1) - 1; i++)
+                {
+                    sum += gameState[playerTurn, i];
+                }
+                if (sum == 0)
+                {
+                    boardEmptied = true;
+                    for (int i = 1; i < gameState.GetLength(0); i++)
+                    {
+                        finalStones += gameState[0, i];
+                    }
+                    gameState[0, 0] += finalStones;
+                }
+            }
+            return boardEmptied;
         }
 
         public void makeMove(int pocket)
@@ -103,9 +145,15 @@ namespace CS438_Mancala
                         col--;
 
                     gameState[row, col] += 1;
-                    goAgain = ((col == 6 && row == 6) ? true : false);
-                }
+                    goAgain = ((col == 6 && row == 1) ? true : false);
+                } // If
+            } // For
+
+            if (emptyBoard())
+            {
+                gameEnd = true;
             }
+
             if (!goAgain) {
                 changeTurn();
             }

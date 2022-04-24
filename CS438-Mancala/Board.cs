@@ -67,7 +67,7 @@ namespace CS438_Mancala
 
             if (playerTurn == 0)
             {
-                for (int i = 1; i < gameState.GetLength(0); i++)
+                for (int i = 1; i < gameState.GetLength(1); i++)
                 {
                     sum += gameState[playerTurn, i];
                 }
@@ -90,7 +90,7 @@ namespace CS438_Mancala
                 if (sum == 0)
                 {
                     boardEmptied = true;
-                    for (int i = 1; i < gameState.GetLength(0); i++)
+                    for (int i = 1; i < gameState.GetLength(1); i++)
                     {
                         finalStones += gameState[0, i];
                     }

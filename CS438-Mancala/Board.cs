@@ -11,15 +11,16 @@ namespace CS438_Mancala
     {
         private const string LOGFILENAME = "Mancala Log.txt";
 
+        public int sv = 1;
         public int[,] gameState;
         public int playerTurn;
         public bool gameEnd = false;
 
         public Board()
         {
-            this.gameState = new int[,] {   {0, 4, 4, 4, 4, 4, 4}, 
-                                            {4, 4, 4, 4, 4, 4, 0 } };
-            this.playerTurn = 0;
+            gameState = new int[,] {   {0, sv, sv, sv, sv, sv, sv}, 
+                                            {sv, sv, sv, sv, sv, sv, 0 } };
+            playerTurn = 0;
 
             // Create new log file
             if (File.Exists(LOGFILENAME))

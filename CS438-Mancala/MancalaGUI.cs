@@ -58,44 +58,62 @@ namespace CS438_Mancala
 
         private void Pocket1_Click(object sender, EventArgs e)
         {
-            board.makeMove(6);
-            board.Log_Move(6);
-            Update_Pockets();
+            if (board.playerTurn == 0)
+            {
+                board.makeMove(6);
+                board.Log_Move(6);
+                Update_Pockets();
+            }
         }
 
         private void Pocket2_Click(object sender, EventArgs e)
         {
-            board.makeMove(5);
-            board.Log_Move(5);
-            Update_Pockets();
+            if (board.playerTurn == 0)
+            {
+                board.makeMove(5);
+                board.Log_Move(5);
+                Update_Pockets();
+            }
         }
 
         private void Pocket3_Click(object sender, EventArgs e)
         {
-            board.makeMove(4);
-            board.Log_Move(4);
-            Update_Pockets();
+            if (board.playerTurn == 0)
+            {
+                board.makeMove(4);
+                board.Log_Move(4);
+                Update_Pockets();
+            }
         }
 
         private void Pocket4_Click(object sender, EventArgs e)
         {
-            board.makeMove(3);
-            board.Log_Move(3);
-            Update_Pockets();
+            if (board.playerTurn == 0)
+            {
+                board.makeMove(3);
+                board.Log_Move(3);
+                Update_Pockets();
+            }
         }
 
         private void Pocket5_Click(object sender, EventArgs e)
         {
-            board.makeMove(2);
-            board.Log_Move(2);
-            Update_Pockets();
+            if (board.playerTurn == 0)
+            {
+                board.makeMove(2);
+                board.Log_Move(2);
+                Update_Pockets();
+            }
         }
 
         private void Pocket6_Click(object sender, EventArgs e)
         {
-            board.makeMove(1);
-            board.Log_Move(1);
-            Update_Pockets();
+            if (board.playerTurn == 0)
+            {
+                board.makeMove(1);
+                board.Log_Move(1);
+                Update_Pockets();
+            }
         }
 
         private void Pocket7_Click(object sender, EventArgs e)
@@ -105,44 +123,62 @@ namespace CS438_Mancala
 
         private void Pocket8_Click(object sender, EventArgs e)
         {
-            board.makeMove(1);
-            board.Log_Move(1);
-            Update_Pockets();
+            if (board.playerTurn == 1)
+            {
+                board.makeMove(1);
+                board.Log_Move(1);
+                Update_Pockets();
+            }
         }
 
         private void Pocket9_Click(object sender, EventArgs e)
         {
-            board.makeMove(2);
-            board.Log_Move(2);
-            Update_Pockets();
+            if (board.playerTurn == 1)
+            {
+                board.makeMove(2);
+                board.Log_Move(2);
+                Update_Pockets();
+            }
         }
 
         private void Pocket10_Click(object sender, EventArgs e)
         {
-            board.makeMove(3);
-            board.Log_Move(3);
-            Update_Pockets();
+            if (board.playerTurn == 1)
+            {
+                board.makeMove(3);
+                board.Log_Move(3);
+                Update_Pockets();
+            }
         }
 
         private void Pocket11_Click(object sender, EventArgs e)
         {
-            board.makeMove(4);
-            board.Log_Move(4);
-            Update_Pockets();
+            if (board.playerTurn == 1)
+            {
+                board.makeMove(4);
+                board.Log_Move(4);
+                Update_Pockets();
+            }
         }
 
         private void Pocket12_Click(object sender, EventArgs e)
         {
-            board.makeMove(5);
-            board.Log_Move(5);
-            Update_Pockets();
+            if (board.playerTurn == 1)
+            {
+                board.makeMove(5);
+                board.Log_Move(5);
+                Update_Pockets();
+            }
         }
 
         private void Pocket13_Click(object sender, EventArgs e)
         {
-            board.makeMove(6);
-            board.Log_Move(6);
-            Update_Pockets();
+            if (board.playerTurn == 1)
+            {
+                board.makeMove(6);
+                board.Log_Move(6);
+                Update_Pockets();
+            }
         }
 
         private void Pocket14_Click(object sender, EventArgs e)

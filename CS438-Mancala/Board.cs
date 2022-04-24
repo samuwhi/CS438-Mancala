@@ -77,6 +77,7 @@ namespace CS438_Mancala
                     for (int i = 0; i < gameState.GetLength(1) - 1; i++)
                     {
                         finalStones += gameState[1, i];
+                        gameState[1, i] = 0;
                     }
                     gameState[1, 6] += finalStones;
                 }
@@ -93,6 +94,7 @@ namespace CS438_Mancala
                     for (int i = 1; i < gameState.GetLength(1); i++)
                     {
                         finalStones += gameState[0, i];
+                        gameState[0, i] = 0;
                     }
                     gameState[0, 0] += finalStones;
                 }

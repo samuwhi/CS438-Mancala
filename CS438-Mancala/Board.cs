@@ -134,7 +134,7 @@ namespace CS438_Mancala
 
                     gameState[row, col] += 1;
 
-                    if (gameState[row, col] == 1 && gameState[1, col - 1] > 0 && i == stones - 1)
+                    if (col != 0 && gameState[row, col] == 1 && gameState[1, col - 1] > 0 && i == stones - 1)
                     {
                         gameState[row, 0] += gameState[1, col - 1];
                         gameState[1, col - 1] = 0;
@@ -158,7 +158,7 @@ namespace CS438_Mancala
 
                     gameState[row, col] += 1;
 
-                    if (gameState[row, col] == 1 && gameState[0, col + 1] > 0 && i == stones - 1)
+                    if (col != 6 && gameState[row, col] == 1 && gameState[0, col + 1] > 0 && i == stones - 1)
                     {
                         gameState[row, 6] += gameState[0, col + 1];
                         gameState[0, col + 1] = 0;

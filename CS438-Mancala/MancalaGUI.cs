@@ -276,13 +276,9 @@ namespace CS438_Mancala
             CurrentPlayerTurnButton.BackColor = Color.SteelBlue;
 
             //This needs fixed, got to wait for whoevers turn to be over with before starting up.
-            if (fileName1 != "")
+            if (fileName1 != "" && board.playerTurn == 0)
             {
                 Process.Start(fileName1);
-            }
-            if (fileName2 != "")
-            {
-                Process.Start(fileName2);
             }
         }
 

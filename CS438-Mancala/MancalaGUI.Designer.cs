@@ -483,6 +483,7 @@
             this.Controls.Add(this.Pocket4);
             this.Controls.Add(this.Pocket3);
             this.Name = "MancalaGUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mancala";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Player1Box.ResumeLayout(false);

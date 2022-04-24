@@ -254,7 +254,7 @@
             // HumanComputerLabel1
             // 
             this.HumanComputerLabel1.AutoSize = true;
-            this.HumanComputerLabel1.Location = new System.Drawing.Point(8, 47);
+            this.HumanComputerLabel1.Location = new System.Drawing.Point(6, 53);
             this.HumanComputerLabel1.Name = "HumanComputerLabel1";
             this.HumanComputerLabel1.Size = new System.Drawing.Size(50, 16);
             this.HumanComputerLabel1.TabIndex = 6;
@@ -274,7 +274,7 @@
             // Score1Text
             // 
             this.Score1Text.AutoSize = true;
-            this.Score1Text.Location = new System.Drawing.Point(58, 63);
+            this.Score1Text.Location = new System.Drawing.Point(56, 69);
             this.Score1Text.Name = "Score1Text";
             this.Score1Text.Size = new System.Drawing.Size(14, 16);
             this.Score1Text.TabIndex = 3;
@@ -284,7 +284,7 @@
             // Score1Label
             // 
             this.Score1Label.AutoSize = true;
-            this.Score1Label.Location = new System.Drawing.Point(10, 64);
+            this.Score1Label.Location = new System.Drawing.Point(8, 70);
             this.Score1Label.Name = "Score1Label";
             this.Score1Label.Size = new System.Drawing.Size(46, 16);
             this.Score1Label.TabIndex = 2;
@@ -294,7 +294,7 @@
             // 
             this.Computer1Button.Location = new System.Drawing.Point(177, 21);
             this.Computer1Button.Name = "Computer1Button";
-            this.Computer1Button.Size = new System.Drawing.Size(130, 23);
+            this.Computer1Button.Size = new System.Drawing.Size(130, 29);
             this.Computer1Button.TabIndex = 1;
             this.Computer1Button.Text = "Computer";
             this.Computer1Button.UseVisualStyleBackColor = true;
@@ -304,7 +304,7 @@
             // 
             this.Human1Button.Location = new System.Drawing.Point(6, 21);
             this.Human1Button.Name = "Human1Button";
-            this.Human1Button.Size = new System.Drawing.Size(130, 23);
+            this.Human1Button.Size = new System.Drawing.Size(130, 29);
             this.Human1Button.TabIndex = 0;
             this.Human1Button.Text = "Human";
             this.Human1Button.UseVisualStyleBackColor = true;
@@ -329,7 +329,7 @@
             // HumanComputerLabel2
             // 
             this.HumanComputerLabel2.AutoSize = true;
-            this.HumanComputerLabel2.Location = new System.Drawing.Point(6, 47);
+            this.HumanComputerLabel2.Location = new System.Drawing.Point(8, 52);
             this.HumanComputerLabel2.Name = "HumanComputerLabel2";
             this.HumanComputerLabel2.Size = new System.Drawing.Size(50, 16);
             this.HumanComputerLabel2.TabIndex = 5;
@@ -349,7 +349,7 @@
             // Score2Text
             // 
             this.Score2Text.AutoSize = true;
-            this.Score2Text.Location = new System.Drawing.Point(58, 63);
+            this.Score2Text.Location = new System.Drawing.Point(60, 68);
             this.Score2Text.Name = "Score2Text";
             this.Score2Text.Size = new System.Drawing.Size(14, 16);
             this.Score2Text.TabIndex = 3;
@@ -359,7 +359,7 @@
             // Score2Label
             // 
             this.Score2Label.AutoSize = true;
-            this.Score2Label.Location = new System.Drawing.Point(6, 63);
+            this.Score2Label.Location = new System.Drawing.Point(8, 68);
             this.Score2Label.Name = "Score2Label";
             this.Score2Label.Size = new System.Drawing.Size(46, 16);
             this.Score2Label.TabIndex = 2;
@@ -369,7 +369,7 @@
             // 
             this.Computer2Button.Location = new System.Drawing.Point(177, 21);
             this.Computer2Button.Name = "Computer2Button";
-            this.Computer2Button.Size = new System.Drawing.Size(130, 23);
+            this.Computer2Button.Size = new System.Drawing.Size(130, 28);
             this.Computer2Button.TabIndex = 1;
             this.Computer2Button.Text = "Computer";
             this.Computer2Button.UseVisualStyleBackColor = true;
@@ -379,7 +379,7 @@
             // 
             this.Human2Button.Location = new System.Drawing.Point(6, 21);
             this.Human2Button.Name = "Human2Button";
-            this.Human2Button.Size = new System.Drawing.Size(130, 23);
+            this.Human2Button.Size = new System.Drawing.Size(130, 28);
             this.Human2Button.TabIndex = 0;
             this.Human2Button.Text = "Human";
             this.Human2Button.UseVisualStyleBackColor = true;

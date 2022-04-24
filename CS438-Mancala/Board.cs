@@ -88,7 +88,7 @@ namespace CS438_Mancala
                         col++;
 
                     gameState[row, col] += 1;
-                    goAgain = (col == 0 ? true : false);
+                    goAgain = ((col == 0 && row == 0) ? true : false);
                 }
 
                 if (playerTurn == 1) {
@@ -103,7 +103,7 @@ namespace CS438_Mancala
                         col--;
 
                     gameState[row, col] += 1;
-                    goAgain = (col == 6 ? true : false);
+                    goAgain = ((col == 6 && row == 6) ? true : false);
                 }
             }
             if (!goAgain) {

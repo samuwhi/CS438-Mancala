@@ -46,6 +46,12 @@ namespace CS438_Mancala
             Score1Text.Text = board.gameState[0, 0].ToString();
             Score2Text.Text = board.gameState[1, 6].ToString();
 
+            if (board.gameEnd == true)
+            {
+                GameEndForm gameEndForm = new GameEndForm(board.gameState[0, 0], board.gameState[1, 6]);
+                gameEndForm.Show();
+            }
+
             //Change Turn Color
             if (board.playerTurn == 0)
             {
@@ -60,6 +66,11 @@ namespace CS438_Mancala
         private bool Allow_Button(int turnToCheck)
         {
             if (!startButtonHasBeenPressed)
+            {
+                return false;
+            }
+
+            if (board.gameEnd == true)
             {
                 return false;
             }
@@ -277,7 +288,10 @@ namespace CS438_Mancala
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
-
+            board = new Board();
+            Update_Pockets();
+            startButtonHasBeenPressed = false;
+            CurrentPlayerTurnButton.BackColor = Color.LightGray;
         }
 
         private void StepForwardButton_Click(object sender, EventArgs e)

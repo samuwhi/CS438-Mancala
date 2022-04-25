@@ -57,14 +57,14 @@
             this.Computer2Button = new System.Windows.Forms.Button();
             this.Human2Button = new System.Windows.Forms.Button();
             this.ControlBox = new System.Windows.Forms.GroupBox();
+            this.TimeToWaitLabel = new System.Windows.Forms.Label();
+            this.TimeToWaitDropdown = new System.Windows.Forms.ComboBox();
             this.StepBackButton = new System.Windows.Forms.Button();
             this.StepForwardButton = new System.Windows.Forms.Button();
             this.ResetButton = new System.Windows.Forms.Button();
             this.StartButton = new System.Windows.Forms.Button();
             this.CurrentPlayersTurnLabel = new System.Windows.Forms.Label();
             this.CurrentPlayerTurnButton = new System.Windows.Forms.Button();
-            this.TimeToWaitDropdown = new System.Windows.Forms.ComboBox();
-            this.TimeToWaitLabel = new System.Windows.Forms.Label();
             this.Player1Box.SuspendLayout();
             this.Player2Box.SuspendLayout();
             this.ControlBox.SuspendLayout();
@@ -259,7 +259,7 @@
             this.HumanComputerLabel1.AutoSize = true;
             this.HumanComputerLabel1.Location = new System.Drawing.Point(6, 53);
             this.HumanComputerLabel1.Name = "HumanComputerLabel1";
-            this.HumanComputerLabel1.Size = new System.Drawing.Size(50, 16);
+            this.HumanComputerLabel1.Size = new System.Drawing.Size(53, 17);
             this.HumanComputerLabel1.TabIndex = 6;
             this.HumanComputerLabel1.Text = "Human";
             // 
@@ -268,7 +268,7 @@
             this.Player1ConsoleWindowCheck.AutoSize = true;
             this.Player1ConsoleWindowCheck.Location = new System.Drawing.Point(6, 123);
             this.Player1ConsoleWindowCheck.Name = "Player1ConsoleWindowCheck";
-            this.Player1ConsoleWindowCheck.Size = new System.Drawing.Size(225, 20);
+            this.Player1ConsoleWindowCheck.Size = new System.Drawing.Size(234, 21);
             this.Player1ConsoleWindowCheck.TabIndex = 4;
             this.Player1ConsoleWindowCheck.Text = "Show Player1\'s Console Window";
             this.Player1ConsoleWindowCheck.UseVisualStyleBackColor = true;
@@ -279,7 +279,7 @@
             this.Score1Text.AutoSize = true;
             this.Score1Text.Location = new System.Drawing.Point(56, 69);
             this.Score1Text.Name = "Score1Text";
-            this.Score1Text.Size = new System.Drawing.Size(14, 16);
+            this.Score1Text.Size = new System.Drawing.Size(16, 17);
             this.Score1Text.TabIndex = 3;
             this.Score1Text.Text = "0";
             this.Score1Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -289,7 +289,7 @@
             this.Score1Label.AutoSize = true;
             this.Score1Label.Location = new System.Drawing.Point(8, 70);
             this.Score1Label.Name = "Score1Label";
-            this.Score1Label.Size = new System.Drawing.Size(46, 16);
+            this.Score1Label.Size = new System.Drawing.Size(49, 17);
             this.Score1Label.TabIndex = 2;
             this.Score1Label.Text = "Score:";
             // 
@@ -334,7 +334,7 @@
             this.HumanComputerLabel2.AutoSize = true;
             this.HumanComputerLabel2.Location = new System.Drawing.Point(8, 52);
             this.HumanComputerLabel2.Name = "HumanComputerLabel2";
-            this.HumanComputerLabel2.Size = new System.Drawing.Size(50, 16);
+            this.HumanComputerLabel2.Size = new System.Drawing.Size(53, 17);
             this.HumanComputerLabel2.TabIndex = 5;
             this.HumanComputerLabel2.Text = "Human";
             // 
@@ -343,7 +343,7 @@
             this.Player2ConsoleWindowCheck.AutoSize = true;
             this.Player2ConsoleWindowCheck.Location = new System.Drawing.Point(6, 123);
             this.Player2ConsoleWindowCheck.Name = "Player2ConsoleWindowCheck";
-            this.Player2ConsoleWindowCheck.Size = new System.Drawing.Size(225, 20);
+            this.Player2ConsoleWindowCheck.Size = new System.Drawing.Size(234, 21);
             this.Player2ConsoleWindowCheck.TabIndex = 4;
             this.Player2ConsoleWindowCheck.Text = "Show Player2\'s Console Window";
             this.Player2ConsoleWindowCheck.UseVisualStyleBackColor = true;
@@ -354,7 +354,7 @@
             this.Score2Text.AutoSize = true;
             this.Score2Text.Location = new System.Drawing.Point(60, 68);
             this.Score2Text.Name = "Score2Text";
-            this.Score2Text.Size = new System.Drawing.Size(14, 16);
+            this.Score2Text.Size = new System.Drawing.Size(16, 17);
             this.Score2Text.TabIndex = 3;
             this.Score2Text.Text = "0";
             this.Score2Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -364,7 +364,7 @@
             this.Score2Label.AutoSize = true;
             this.Score2Label.Location = new System.Drawing.Point(8, 68);
             this.Score2Label.Name = "Score2Label";
-            this.Score2Label.Size = new System.Drawing.Size(46, 16);
+            this.Score2Label.Size = new System.Drawing.Size(49, 17);
             this.Score2Label.TabIndex = 2;
             this.Score2Label.Text = "Score:";
             // 
@@ -403,6 +403,30 @@
             this.ControlBox.TabIndex = 17;
             this.ControlBox.TabStop = false;
             this.ControlBox.Text = "Control";
+            // 
+            // TimeToWaitLabel
+            // 
+            this.TimeToWaitLabel.AutoSize = true;
+            this.TimeToWaitLabel.Location = new System.Drawing.Point(174, 77);
+            this.TimeToWaitLabel.Name = "TimeToWaitLabel";
+            this.TimeToWaitLabel.Size = new System.Drawing.Size(87, 17);
+            this.TimeToWaitLabel.TabIndex = 21;
+            this.TimeToWaitLabel.Text = "AI Wait Time";
+            // 
+            // TimeToWaitDropdown
+            // 
+            this.TimeToWaitDropdown.FormattingEnabled = true;
+            this.TimeToWaitDropdown.Items.AddRange(new object[] {
+            "5 seconds",
+            "10 seconds",
+            "20 seconds",
+            "1 minute",
+            "No Limit"});
+            this.TimeToWaitDropdown.Location = new System.Drawing.Point(177, 96);
+            this.TimeToWaitDropdown.Name = "TimeToWaitDropdown";
+            this.TimeToWaitDropdown.Size = new System.Drawing.Size(130, 24);
+            this.TimeToWaitDropdown.TabIndex = 20;
+            this.TimeToWaitDropdown.SelectedIndexChanged += new System.EventHandler(this.TimeToWaitDropdown_SelectedIndexChanged);
             // 
             // StepBackButton
             // 
@@ -462,29 +486,6 @@
             this.CurrentPlayerTurnButton.Size = new System.Drawing.Size(100, 100);
             this.CurrentPlayerTurnButton.TabIndex = 19;
             this.CurrentPlayerTurnButton.UseVisualStyleBackColor = false;
-            // 
-            // TimeToWaitDropdown
-            // 
-            this.TimeToWaitDropdown.FormattingEnabled = true;
-            this.TimeToWaitDropdown.Items.AddRange(new object[] {
-            "5 seconds",
-            "10 seconds",
-            "20 seconds",
-            "1 minute",
-            "No Limit"});
-            this.TimeToWaitDropdown.Location = new System.Drawing.Point(177, 96);
-            this.TimeToWaitDropdown.Name = "TimeToWaitDropdown";
-            this.TimeToWaitDropdown.Size = new System.Drawing.Size(130, 24);
-            this.TimeToWaitDropdown.TabIndex = 20;
-            // 
-            // TimeToWaitLabel
-            // 
-            this.TimeToWaitLabel.AutoSize = true;
-            this.TimeToWaitLabel.Location = new System.Drawing.Point(174, 77);
-            this.TimeToWaitLabel.Name = "TimeToWaitLabel";
-            this.TimeToWaitLabel.Size = new System.Drawing.Size(83, 16);
-            this.TimeToWaitLabel.TabIndex = 21;
-            this.TimeToWaitLabel.Text = "AI Wait Time";
             // 
             // MancalaGUI
             // 

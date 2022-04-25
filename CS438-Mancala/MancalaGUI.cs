@@ -26,6 +26,9 @@ namespace CS438_Mancala
         public bool player1human = true;
         public bool player2human = true;
 
+        private Color board1Color = Color.Aquamarine;
+        private Color board1HoverColor = Color.MediumAquamarine;
+
         private static string player1file = "";
         private static string player2file = "";
         public MancalaGUI()
@@ -100,7 +103,7 @@ namespace CS438_Mancala
             //Change Turn Color
             if (board.playerTurn == 0)
             {
-                CurrentPlayerTurnButton.BackColor = Color.SteelBlue;
+                CurrentPlayerTurnButton.BackColor = board1Color;
             }
             else
             {
@@ -138,6 +141,15 @@ namespace CS438_Mancala
         {
 
         }
+        private void Pocket1_Click_1(object sender, EventArgs e)
+        {
+            if (Allow_Button(0))
+            {
+                board.makeMove(6);
+                board.Log_Move(6);
+                Update_Pockets();
+            }
+        }
         private void Pocket1_Click(object sender, EventArgs e)
         {
             if (Allow_Button(0))
@@ -146,6 +158,14 @@ namespace CS438_Mancala
                 board.Log_Move(6);
                 Update_Pockets();
             }
+        }
+        private void Pocket1_MouseHover(object sender, EventArgs e)
+        {
+            Pocket1.BackColor = board1HoverColor;
+        }
+        private void Pocket1_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket1.BackColor = board1Color;
         }
         private void Pocket2_Click(object sender, EventArgs e)
         {
@@ -156,6 +176,14 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
+        private void Pocket2_MouseHover(object sender, EventArgs e)
+        {
+            Pocket2.BackColor = board1HoverColor;
+        }
+        private void Pocket2_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket2.BackColor = board1Color;
+        }
         private void Pocket3_Click(object sender, EventArgs e)
         {
             if (Allow_Button(0))
@@ -164,6 +192,14 @@ namespace CS438_Mancala
                 board.Log_Move(4);
                 Update_Pockets();
             }
+        }
+        private void Pocket3_MouseHover(object sender, EventArgs e)
+        {
+            Pocket3.BackColor = board1HoverColor;
+        }
+        private void Pocket3_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket3.BackColor = board1Color;
         }
         private void Pocket4_Click(object sender, EventArgs e)
         {
@@ -174,6 +210,14 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
+        private void Pocket4_MouseHover(object sender, EventArgs e)
+        {
+            Pocket4.BackColor = board1HoverColor;
+        }
+        private void Pocket4_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket4.BackColor = board1Color;
+        }
         private void Pocket5_Click(object sender, EventArgs e)
         {
             if (Allow_Button(0))
@@ -183,6 +227,14 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
+        private void Pocket5_MouseHover(object sender, EventArgs e)
+        {
+            Pocket5.BackColor = board1HoverColor;
+        }
+        private void Pocket5_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket5.BackColor = board1Color;
+        }
         private void Pocket6_Click(object sender, EventArgs e)
         {
             if (Allow_Button(0))
@@ -191,6 +243,14 @@ namespace CS438_Mancala
                 board.Log_Move(1);
                 Update_Pockets();
             }
+        }
+        private void Pocket6_MouseHover(object sender, EventArgs e)
+        {
+            Pocket6.BackColor = board1HoverColor;
+        }
+        private void Pocket6_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket6.BackColor = board1Color;
         }
         private void Pocket7_Click(object sender, EventArgs e)
         {
@@ -299,7 +359,7 @@ namespace CS438_Mancala
         private void StartButton_Click(object sender, EventArgs e)
         {
             startButtonHasBeenPressed = true;
-            CurrentPlayerTurnButton.BackColor = Color.SteelBlue;
+            CurrentPlayerTurnButton.BackColor = board1Color;
 
             //This needs fixed, got to wait for whoevers turn to be over with before starting up.
             if (fileName1 != "" && board.playerTurn == 0)

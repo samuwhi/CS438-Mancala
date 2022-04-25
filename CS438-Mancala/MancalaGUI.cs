@@ -39,24 +39,29 @@ namespace CS438_Mancala
 
         private void Get_Next_Turn()
         {
+            Process process;
             string path;
+            string file;
             int move;
 
             if ((board.playerTurn == 0 && player1human == false) | (board.playerTurn == 1 && player2human == false))
             {
                 if (board.playerTurn == 0)
                 {
-                    path = player1file;
+                    file = player1file;
                 } else
                 {
-                    path = player2file;
+                    file = player2file;
                 }
 
-                path = Path.GetDirectoryName(path);
+                path = Path.GetDirectoryName(file);
                 
-
+                // write out to text file
                 board.Print_Current_Board(path);
+
                 // run executable
+                process = Process.Start(file);
+                process.WaitForExit(1000);
                 
                 // read from move file
                 using (StreamReader sr = new StreamReader(path+"\\move.txt"))

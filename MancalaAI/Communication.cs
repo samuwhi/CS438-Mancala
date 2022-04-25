@@ -23,6 +23,11 @@ namespace MancalaAI
 
         public static bool putMove(int pocket)
         {
+            if (File.Exists(MOVEFILE))
+            {
+                File.Delete(MOVEFILE);
+            }
+            File.create(MOVEFILE)
             using (StreamWriter writer = new StreamWriter(MOVEFILE))
             {
                 writer.WriteLine(pocket);

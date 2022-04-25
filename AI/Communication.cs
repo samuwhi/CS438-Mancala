@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace MancalaAI
+namespace AI
 {
     internal class Communication
     {
@@ -15,7 +15,7 @@ namespace MancalaAI
         {
             using (StreamReader reader = new StreamReader(BOARDFILE))
             {
-                board = 
+                
             }
 
             return true;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MancalaGUI));
             this.Pocket3 = new System.Windows.Forms.Button();
             this.Pocket4 = new System.Windows.Forms.Button();
             this.Pocket5 = new System.Windows.Forms.Button();
@@ -65,9 +66,11 @@
             this.StartButton = new System.Windows.Forms.Button();
             this.CurrentPlayersTurnLabel = new System.Windows.Forms.Label();
             this.CurrentPlayerTurnButton = new System.Windows.Forms.Button();
+            this.BackgroundImage = new System.Windows.Forms.PictureBox();
             this.Player1Box.SuspendLayout();
             this.Player2Box.SuspendLayout();
             this.ControlBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BackgroundImage)).BeginInit();
             this.SuspendLayout();
             // 
             // Pocket3
@@ -471,6 +474,7 @@
             // CurrentPlayersTurnLabel
             // 
             this.CurrentPlayersTurnLabel.AutoSize = true;
+            this.CurrentPlayersTurnLabel.BackColor = System.Drawing.Color.Wheat;
             this.CurrentPlayersTurnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.CurrentPlayersTurnLabel.Location = new System.Drawing.Point(580, 286);
             this.CurrentPlayersTurnLabel.Name = "CurrentPlayersTurnLabel";
@@ -481,19 +485,30 @@
             // CurrentPlayerTurnButton
             // 
             this.CurrentPlayerTurnButton.BackColor = System.Drawing.Color.LightGray;
-            this.CurrentPlayerTurnButton.Location = new System.Drawing.Point(954, 257);
+            this.CurrentPlayerTurnButton.Location = new System.Drawing.Point(1004, 257);
             this.CurrentPlayerTurnButton.Name = "CurrentPlayerTurnButton";
             this.CurrentPlayerTurnButton.Size = new System.Drawing.Size(100, 100);
             this.CurrentPlayerTurnButton.TabIndex = 19;
             this.CurrentPlayerTurnButton.UseVisualStyleBackColor = false;
+            // 
+            // BackgroundImage
+            // 
+            this.BackgroundImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImage.Image = ((System.Drawing.Image)(resources.GetObject("BackgroundImage.Image")));
+            this.BackgroundImage.Location = new System.Drawing.Point(415, 30);
+            this.BackgroundImage.Name = "BackgroundImage";
+            this.BackgroundImage.Size = new System.Drawing.Size(960, 556);
+            this.BackgroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BackgroundImage.TabIndex = 20;
+            this.BackgroundImage.TabStop = false;
             // 
             // MancalaGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1387, 645);
-            this.Controls.Add(this.CurrentPlayerTurnButton);
             this.Controls.Add(this.CurrentPlayersTurnLabel);
+            this.Controls.Add(this.CurrentPlayerTurnButton);
             this.Controls.Add(this.ControlBox);
             this.Controls.Add(this.Player2Box);
             this.Controls.Add(this.Player1Box);
@@ -511,6 +526,7 @@
             this.Controls.Add(this.Pocket5);
             this.Controls.Add(this.Pocket4);
             this.Controls.Add(this.Pocket3);
+            this.Controls.Add(this.BackgroundImage);
             this.Name = "MancalaGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mancala";
@@ -521,6 +537,7 @@
             this.Player2Box.PerformLayout();
             this.ControlBox.ResumeLayout(false);
             this.ControlBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BackgroundImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -564,6 +581,7 @@
         private System.Windows.Forms.Label HumanComputerLabel2;
         private System.Windows.Forms.Label TimeToWaitLabel;
         private System.Windows.Forms.ComboBox TimeToWaitDropdown;
+        private System.Windows.Forms.PictureBox BackgroundImage;
     }
 }
 

@@ -18,6 +18,7 @@ namespace CS438_Mancala
         public string fileName2 = "";
 
         private bool startButtonHasBeenPressed = false;
+        private int timeToWaitInSeconds = 1000000;
 
         public Board board;
         public Button[] player1Pockets;
@@ -315,6 +316,32 @@ namespace CS438_Mancala
         private void StepBackButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TimeToWaitDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string waitTimeString = TimeToWaitDropdown.SelectedItem.ToString();
+
+            if (waitTimeString == "5 seconds")
+            {
+                timeToWaitInSeconds = 5;
+            }
+            else if (waitTimeString == "10 seconds")
+            {
+                timeToWaitInSeconds = 10;
+            }
+            else if (waitTimeString == "20 seconds")
+            {
+                timeToWaitInSeconds = 20;
+            }
+            else if (waitTimeString == "1 minute")
+            {
+                timeToWaitInSeconds = 60;
+            }
+            else
+            {
+                timeToWaitInSeconds = 1000000;
+            }
         }
     }
 }

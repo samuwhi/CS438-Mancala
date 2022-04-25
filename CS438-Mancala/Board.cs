@@ -10,6 +10,7 @@ namespace CS438_Mancala
     public class Board
     {
         private const string LOGFILENAME = "Mancala Log.txt";
+        private const string BOARDFILENAME = "Board.txt";
 
         public int sv = 1;
         public int[,] gameState;
@@ -31,10 +32,36 @@ namespace CS438_Mancala
             outFile.Close();
         }
 
-        public void Get_Current_Board(ref int[,] gameState, ref int playerTurn)
+        public void Print_Current_Board()
         {
-            gameState = this.gameState;
-            playerTurn = this.playerTurn;
+            if (File.Exists(BOARDFILENAME))
+            {
+                File.Delete(BOARDFILENAME);
+            }
+
+            StreamWriter moveFile = File.CreateText(BOARDFILENAME);
+
+            string line1 = "";
+            string line2 = "";
+            string line3 = "";
+
+            for (int i = 0; i < gameState.GetLength(1); ++i)
+            {
+                line1 += gameState[0, i].ToString();
+            }
+
+            for (int i = 0; i < gameState.GetLength(1); ++i)
+            {
+                line2 += gameState[1, i].ToString();
+            }
+
+            line3 = playerTurn.ToString();
+
+            moveFile.WriteLine(line1);
+            moveFile.WriteLine(line2);
+            moveFile.WriteLine(line3);
+
+            moveFile.Close();
         }
 
         public void Log_Move(int pocket)
@@ -134,6 +161,7 @@ namespace CS438_Mancala
 
                     gameState[row, col] += 1;
 
+                    //Check to see if the player landed on their own space to steal the other players adjacent pieces;
                     if (col != 0 && gameState[row, col] == 1 && gameState[1, col - 1] > 0 && i == stones - 1)
                     {
                         gameState[row, 0] += gameState[1, col - 1];
@@ -158,6 +186,7 @@ namespace CS438_Mancala
 
                     gameState[row, col] += 1;
 
+                    //Check to see if the player landed on their own space to steal the other players adjacent pieces;
                     if (col != 6 && gameState[row, col] == 1 && gameState[0, col + 1] > 0 && i == stones - 1)
                     {
                         gameState[row, 6] += gameState[0, col + 1];

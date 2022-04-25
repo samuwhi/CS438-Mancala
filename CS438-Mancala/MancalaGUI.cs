@@ -62,6 +62,8 @@ namespace CS438_Mancala
             {
                 CurrentPlayerTurnButton.BackColor = Color.OrangeRed;
             }
+
+            board.Print_Current_Board();
         }
 
         private bool Allow_Button(int turnToCheck)

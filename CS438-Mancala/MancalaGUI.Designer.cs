@@ -63,6 +63,8 @@
             this.StartButton = new System.Windows.Forms.Button();
             this.CurrentPlayersTurnLabel = new System.Windows.Forms.Label();
             this.CurrentPlayerTurnButton = new System.Windows.Forms.Button();
+            this.TimeToWaitDropdown = new System.Windows.Forms.ComboBox();
+            this.TimeToWaitLabel = new System.Windows.Forms.Label();
             this.Player1Box.SuspendLayout();
             this.Player2Box.SuspendLayout();
             this.ControlBox.SuspendLayout();
@@ -107,6 +109,7 @@
             // Pocket6
             // 
             this.Pocket6.BackColor = System.Drawing.Color.SteelBlue;
+            this.Pocket6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Pocket6.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pocket6.Location = new System.Drawing.Point(547, 94);
             this.Pocket6.Name = "Pocket6";
@@ -387,6 +390,8 @@
             // 
             // ControlBox
             // 
+            this.ControlBox.Controls.Add(this.TimeToWaitLabel);
+            this.ControlBox.Controls.Add(this.TimeToWaitDropdown);
             this.ControlBox.Controls.Add(this.StepBackButton);
             this.ControlBox.Controls.Add(this.StepForwardButton);
             this.ControlBox.Controls.Add(this.ResetButton);
@@ -403,7 +408,7 @@
             // 
             this.StepBackButton.Location = new System.Drawing.Point(6, 131);
             this.StepBackButton.Name = "StepBackButton";
-            this.StepBackButton.Size = new System.Drawing.Size(167, 27);
+            this.StepBackButton.Size = new System.Drawing.Size(150, 27);
             this.StepBackButton.TabIndex = 3;
             this.StepBackButton.Text = "Step Backward in Log";
             this.StepBackButton.UseVisualStyleBackColor = true;
@@ -413,7 +418,7 @@
             // 
             this.StepForwardButton.Location = new System.Drawing.Point(6, 83);
             this.StepForwardButton.Name = "StepForwardButton";
-            this.StepForwardButton.Size = new System.Drawing.Size(167, 27);
+            this.StepForwardButton.Size = new System.Drawing.Size(150, 27);
             this.StepForwardButton.TabIndex = 2;
             this.StepForwardButton.Text = "Step Forward in Log";
             this.StepForwardButton.UseVisualStyleBackColor = true;
@@ -458,6 +463,29 @@
             this.CurrentPlayerTurnButton.TabIndex = 19;
             this.CurrentPlayerTurnButton.UseVisualStyleBackColor = false;
             // 
+            // TimeToWaitDropdown
+            // 
+            this.TimeToWaitDropdown.FormattingEnabled = true;
+            this.TimeToWaitDropdown.Items.AddRange(new object[] {
+            "5 seconds",
+            "10 seconds",
+            "20 seconds",
+            "1 minute",
+            "No Limit"});
+            this.TimeToWaitDropdown.Location = new System.Drawing.Point(177, 96);
+            this.TimeToWaitDropdown.Name = "TimeToWaitDropdown";
+            this.TimeToWaitDropdown.Size = new System.Drawing.Size(130, 24);
+            this.TimeToWaitDropdown.TabIndex = 20;
+            // 
+            // TimeToWaitLabel
+            // 
+            this.TimeToWaitLabel.AutoSize = true;
+            this.TimeToWaitLabel.Location = new System.Drawing.Point(174, 77);
+            this.TimeToWaitLabel.Name = "TimeToWaitLabel";
+            this.TimeToWaitLabel.Size = new System.Drawing.Size(83, 16);
+            this.TimeToWaitLabel.TabIndex = 21;
+            this.TimeToWaitLabel.Text = "AI Wait Time";
+            // 
             // MancalaGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -491,6 +519,7 @@
             this.Player2Box.ResumeLayout(false);
             this.Player2Box.PerformLayout();
             this.ControlBox.ResumeLayout(false);
+            this.ControlBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -532,6 +561,8 @@
         private System.Windows.Forms.Button CurrentPlayerTurnButton;
         private System.Windows.Forms.Label HumanComputerLabel1;
         private System.Windows.Forms.Label HumanComputerLabel2;
+        private System.Windows.Forms.Label TimeToWaitLabel;
+        private System.Windows.Forms.ComboBox TimeToWaitDropdown;
     }
 }
 

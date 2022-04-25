@@ -32,7 +32,7 @@ namespace CS438_Mancala
             outFile.Close();
         }
 
-        public void Print_Current_Board()
+        public void Print_Current_Board(string path)
         {
             if (File.Exists(BOARDFILENAME))
             {

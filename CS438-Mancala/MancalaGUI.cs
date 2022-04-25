@@ -31,6 +31,7 @@ namespace CS438_Mancala
             player1Pockets = new Button[] { Pocket7, Pocket6, Pocket5, Pocket4, Pocket3, Pocket2, Pocket1 };
             player2Pockets = new Button[] { Pocket8, Pocket9, Pocket10, Pocket11, Pocket12, Pocket13, Pocket14 };
             Update_Pockets();
+            CurrentPlayerTurnButton.BackColor = Color.LightGray;
         }
 
         private void Get_Next_Turn()

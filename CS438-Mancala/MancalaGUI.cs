@@ -22,6 +22,8 @@ namespace CS438_Mancala
         public Board board;
         public Button[] player1Pockets;
         public Button[] player2Pockets;
+        public bool player1human = true;
+        public bool player2human = true;
         public MancalaGUI()
         {
             InitializeComponent();
@@ -29,6 +31,18 @@ namespace CS438_Mancala
             player1Pockets = new Button[] { Pocket7, Pocket6, Pocket5, Pocket4, Pocket3, Pocket2, Pocket1 };
             player2Pockets = new Button[] { Pocket8, Pocket9, Pocket10, Pocket11, Pocket12, Pocket13, Pocket14 };
             Update_Pockets();
+        }
+
+        private void Get_Next_Turn()
+        {
+            if ((board.playerTurn == 0 && player1human == false) | (board.playerTurn == 1 && player2human == false))
+            {
+                // print game board as a text file
+                // run executable
+                // read the move text file
+                // board.makeMove();
+                Update_Pockets();
+            }
         }
 
         private void Update_Pockets()
@@ -62,6 +76,8 @@ namespace CS438_Mancala
             {
                 CurrentPlayerTurnButton.BackColor = Color.OrangeRed;
             }
+
+            Get_Next_Turn();
         }
 
         private bool Allow_Button(int turnToCheck)
@@ -240,6 +256,7 @@ namespace CS438_Mancala
             {
                 fileName1 = openFileDialog.FileName;
                 HumanComputerLabel1.Text = fileName1;
+                player1human = false;
             }
         }
 
@@ -263,6 +280,7 @@ namespace CS438_Mancala
             {
                 fileName2 = openFileDialog.FileName;
                 HumanComputerLabel2.Text = fileName2;
+                player2human = false;
             }
         }
 

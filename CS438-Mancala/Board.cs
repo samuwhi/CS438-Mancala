@@ -12,7 +12,7 @@ namespace CS438_Mancala
         private const string LOGFILENAME = "Mancala Log.txt";
         private const string BOARDFILENAME = "Board.txt";
 
-        public int sv = 1;
+        public int sv = 4;
         public int[,] gameState;
         public int playerTurn;
         public bool gameEnd = false;

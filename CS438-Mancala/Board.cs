@@ -93,40 +93,38 @@ namespace CS438_Mancala
             int finalStones = 0;
             bool boardEmptied = false;
 
-            if (playerTurn == 0)
+            for (int i = 1; i < gameState.GetLength(1); i++)
             {
-                for (int i = 1; i < gameState.GetLength(1); i++)
-                {
-                    sum += gameState[playerTurn, i];
-                }
-                if (sum == 0)
-                {
-                    boardEmptied = true;
-                    for (int i = 0; i < gameState.GetLength(1) - 1; i++)
-                    {
-                        finalStones += gameState[1, i];
-                        gameState[1, i] = 0;
-                    }
-                    gameState[1, 6] += finalStones;
-                }
+                sum += gameState[0, i];
             }
-            if (playerTurn == 1)
+            if (sum == 0)
             {
+                boardEmptied = true;
                 for (int i = 0; i < gameState.GetLength(1) - 1; i++)
                 {
-                    sum += gameState[playerTurn, i];
+                    finalStones += gameState[1, i];
+                    gameState[1, i] = 0;
                 }
-                if (sum == 0)
-                {
-                    boardEmptied = true;
-                    for (int i = 1; i < gameState.GetLength(1); i++)
-                    {
-                        finalStones += gameState[0, i];
-                        gameState[0, i] = 0;
-                    }
-                    gameState[0, 0] += finalStones;
-                }
+                gameState[1, 6] += finalStones;
             }
+
+            finalStones = 0;
+            sum = 0;
+            for (int i = 0; i < gameState.GetLength(1) - 1; i++)
+            {
+                sum += gameState[1, i];
+            }
+            if (sum == 0)
+            {
+                boardEmptied = true;
+                for (int i = 1; i < gameState.GetLength(1); i++)
+                {
+                    finalStones += gameState[0, i];
+                    gameState[0, i] = 0;
+                }
+                gameState[0, 0] += finalStones;
+            }
+            
             return boardEmptied;
         }
 

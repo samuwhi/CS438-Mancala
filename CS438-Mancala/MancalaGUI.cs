@@ -24,6 +24,9 @@ namespace CS438_Mancala
         public Button[] player2Pockets;
         public bool player1human = true;
         public bool player2human = true;
+
+        private static string player1file = "";
+        private static string player2file = "";
         public MancalaGUI()
         {
             InitializeComponent();
@@ -36,12 +39,32 @@ namespace CS438_Mancala
 
         private void Get_Next_Turn()
         {
+            string path;
+            int move;
+
             if ((board.playerTurn == 0 && player1human == false) | (board.playerTurn == 1 && player2human == false))
             {
-                // print game board as a text file
+                if (board.playerTurn == 0)
+                {
+                    path = player1file;
+                } else
+                {
+                    path = player2file;
+                }
+
+                path = Path.GetDirectoryName(path);
+                
+
+                board.Print_Current_Board(path);
                 // run executable
-                // read the move text file
-                // board.makeMove();
+                
+                // read from move file
+                using (StreamReader sr = new StreamReader(path+"\\move.txt"))
+                {
+                    string line = sr.ReadLine();
+                    move = int.Parse(line);
+                }
+                board.makeMove(move);
                 Update_Pockets();
             }
         }
@@ -80,7 +103,6 @@ namespace CS438_Mancala
 
             Get_Next_Turn();
         }
-
         private bool Allow_Button(int turnToCheck)
         {
             if (!startButtonHasBeenPressed)
@@ -106,12 +128,10 @@ namespace CS438_Mancala
                 return false;
             }
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
         private void Pocket1_Click(object sender, EventArgs e)
         {
             if (Allow_Button(0))
@@ -121,7 +141,6 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket2_Click(object sender, EventArgs e)
         {
             if (Allow_Button(0))
@@ -131,7 +150,6 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket3_Click(object sender, EventArgs e)
         {
             if (Allow_Button(0))
@@ -141,7 +159,6 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket4_Click(object sender, EventArgs e)
         {
             if (Allow_Button(0))
@@ -151,7 +168,6 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket5_Click(object sender, EventArgs e)
         {
             if (Allow_Button(0))
@@ -161,7 +177,6 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket6_Click(object sender, EventArgs e)
         {
             if (Allow_Button(0))
@@ -171,12 +186,10 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket7_Click(object sender, EventArgs e)
         {
             // This is player 1s Pit
         }
-
         private void Pocket8_Click(object sender, EventArgs e)
         {
             if (Allow_Button(1))
@@ -186,7 +199,6 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket9_Click(object sender, EventArgs e)
         {
             if (Allow_Button(1))
@@ -196,7 +208,6 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket10_Click(object sender, EventArgs e)
         {
             if (Allow_Button(1))
@@ -206,7 +217,6 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket11_Click(object sender, EventArgs e)
         {
             if (Allow_Button(1))
@@ -216,7 +226,6 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket12_Click(object sender, EventArgs e)
         {
             if (Allow_Button(1))
@@ -226,7 +235,6 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket13_Click(object sender, EventArgs e)
         {
             if (Allow_Button(1))
@@ -236,17 +244,14 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
-
         private void Pocket14_Click(object sender, EventArgs e)
         {
             //This is player 2's pit
         }
-
         private void Human1Button_Click(object sender, EventArgs e)
         {
             HumanComputerLabel1.Text = "Human";
         }
-
         private void Computer1Button_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -255,22 +260,19 @@ namespace CS438_Mancala
             DialogResult result = openFileDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
-                fileName1 = openFileDialog.FileName;
-                HumanComputerLabel1.Text = fileName1;
+                player1file = openFileDialog.FileName;
+                HumanComputerLabel1.Text = player1file;
                 player1human = false;
             }
         }
-
         private void Player1ConsoleWindowCheck_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-
         private void Human2Button_Click(object sender, EventArgs e)
         {
             HumanComputerLabel2.Text = "Human";
         }
-
         private void Computer2Button_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -279,17 +281,15 @@ namespace CS438_Mancala
             DialogResult result = openFileDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
-                fileName2 = openFileDialog.FileName;
-                HumanComputerLabel2.Text = fileName2;
+                player2file = openFileDialog.FileName;
+                HumanComputerLabel2.Text = player2file;
                 player2human = false;
             }
         }
-
         private void Player2ConsoleWindowCheck_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-
         private void StartButton_Click(object sender, EventArgs e)
         {
             startButtonHasBeenPressed = true;
@@ -301,7 +301,6 @@ namespace CS438_Mancala
                 Process.Start(fileName1);
             }
         }
-
         private void ResetButton_Click(object sender, EventArgs e)
         {
             board = new Board();
@@ -309,12 +308,10 @@ namespace CS438_Mancala
             startButtonHasBeenPressed = false;
             CurrentPlayerTurnButton.BackColor = Color.LightGray;
         }
-
         private void StepForwardButton_Click(object sender, EventArgs e)
         {
 
         }
-
         private void StepBackButton_Click(object sender, EventArgs e)
         {
 

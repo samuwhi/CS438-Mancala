@@ -34,12 +34,14 @@ namespace CS438_Mancala
 
         public void Print_Current_Board(string path)
         {
-            if (File.Exists(BOARDFILENAME))
+            path += "\\" + BOARDFILENAME;
+
+            if (File.Exists(path))
             {
-                File.Delete(BOARDFILENAME);
+                File.Delete(path);
             }
 
-            StreamWriter moveFile = File.CreateText(BOARDFILENAME);
+            StreamWriter moveFile = File.CreateText(path);
 
             string line1 = "";
             string line2 = "";

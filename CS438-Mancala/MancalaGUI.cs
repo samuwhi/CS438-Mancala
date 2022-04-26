@@ -26,8 +26,10 @@ namespace CS438_Mancala
         public bool player1human = true;
         public bool player2human = true;
 
-        private Color board1Color = Color.Aquamarine;
-        private Color board1HoverColor = Color.MediumAquamarine;
+        private Color board1Color = Color.MediumSpringGreen;
+        private Color board1HoverColor = Color.MediumSeaGreen;
+        private Color board2Color = Color.Salmon;
+        private Color board2HoverColor = Color.IndianRed;
 
         private static string player1file = "";
         private static string player2file = "";
@@ -107,7 +109,7 @@ namespace CS438_Mancala
             }
             else
             {
-                CurrentPlayerTurnButton.BackColor = Color.OrangeRed;
+                CurrentPlayerTurnButton.BackColor = board2Color;
             }
 
             Get_Next_Turn();
@@ -265,6 +267,14 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
+        private void Pocket8_MouseHover(object sender, EventArgs e)
+        {
+            Pocket8.BackColor = board2HoverColor;
+        }
+        private void Pocket8_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket8.BackColor = board2Color;
+        }
         private void Pocket9_Click(object sender, EventArgs e)
         {
             if (Allow_Button(1))
@@ -273,6 +283,14 @@ namespace CS438_Mancala
                 board.Log_Move(2);
                 Update_Pockets();
             }
+        }
+        private void Pocket9_MouseHover(object sender, EventArgs e)
+        {
+            Pocket9.BackColor = board2HoverColor;
+        }
+        private void Pocket9_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket9.BackColor = board2Color;
         }
         private void Pocket10_Click(object sender, EventArgs e)
         {
@@ -283,6 +301,14 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
+        private void Pocket10_MouseHover(object sender, EventArgs e)
+        {
+            Pocket10.BackColor = board2HoverColor;
+        }
+        private void Pocket10_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket10.BackColor = board2Color;
+        }
         private void Pocket11_Click(object sender, EventArgs e)
         {
             if (Allow_Button(1))
@@ -291,6 +317,14 @@ namespace CS438_Mancala
                 board.Log_Move(4);
                 Update_Pockets();
             }
+        }
+        private void Pocket11_MouseHover(object sender, EventArgs e)
+        {
+            Pocket11.BackColor = board2HoverColor;
+        }
+        private void Pocket11_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket11.BackColor = board2Color;
         }
         private void Pocket12_Click(object sender, EventArgs e)
         {
@@ -301,6 +335,14 @@ namespace CS438_Mancala
                 Update_Pockets();
             }
         }
+        private void Pocket12_MouseHover(object sender, EventArgs e)
+        {
+            Pocket12.BackColor = board2HoverColor;
+        }
+        private void Pocket12_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket12.BackColor = board2Color;
+        }
         private void Pocket13_Click(object sender, EventArgs e)
         {
             if (Allow_Button(1))
@@ -309,6 +351,14 @@ namespace CS438_Mancala
                 board.Log_Move(6);
                 Update_Pockets();
             }
+        }
+        private void Pocket13_MouseHover(object sender, EventArgs e)
+        {
+            Pocket13.BackColor = board2HoverColor;
+        }
+        private void Pocket13_MouseLeave(object sender, EventArgs e)
+        {
+            Pocket13.BackColor = board2Color;
         }
         private void Pocket14_Click(object sender, EventArgs e)
         {

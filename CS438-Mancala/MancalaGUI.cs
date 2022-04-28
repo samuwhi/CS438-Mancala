@@ -26,6 +26,9 @@ namespace CS438_Mancala
         public bool player1human = true;
         public bool player2human = true;
 
+        private bool console1WindowChecked = false;
+        private bool console2WindowChecked = false;
+
         private Color board1Color = Color.MediumSpringGreen;
         private Color board1HoverColor = Color.MediumSeaGreen;
         private Color board2Color = Color.Salmon;
@@ -72,6 +75,17 @@ namespace CS438_Mancala
                 psi.FileName = filename;
                 psi.CreateNoWindow = true;
                 psi.WindowStyle = ProcessWindowStyle.Hidden;
+
+                if (console1WindowChecked)
+                {
+                    psi.CreateNoWindow = false;
+                    psi.WindowStyle = ProcessWindowStyle.Normal;
+                }
+                if (console2WindowChecked)
+                {
+                    psi.CreateNoWindow = false;
+                    psi.WindowStyle = ProcessWindowStyle.Normal;
+                }
                 
                 process = Process.Start(psi);
                 process.WaitForExit();
@@ -135,8 +149,13 @@ namespace CS438_Mancala
 
             Get_Next_Turn();
         }
-        private bool Allow_Button(int turnToCheck)
+        private bool Allow_Button(int turnToCheck, RoundButton Pocket)
         {
+            if (Pocket.Text == "0")
+            {
+                return false;
+            }
+
             if (!startButtonHasBeenPressed)
             {
                 return false;
@@ -171,7 +190,7 @@ namespace CS438_Mancala
         }
         private void Pocket1_Click_1(object sender, EventArgs e)
         {
-            if (Allow_Button(0))
+            if (Allow_Button(0, Pocket1))
             {
                 board.makeMove(6);
                 board.Log_Move(6);
@@ -180,7 +199,7 @@ namespace CS438_Mancala
         }
         private void Pocket1_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(0))
+            if (Allow_Button(0, Pocket1))
             {
                 board.makeMove(6);
                 board.Log_Move(6);
@@ -197,7 +216,7 @@ namespace CS438_Mancala
         }
         private void Pocket2_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(0))
+            if (Allow_Button(0, Pocket2))
             {
                 board.makeMove(5);
                 board.Log_Move(5);
@@ -214,7 +233,7 @@ namespace CS438_Mancala
         }
         private void Pocket3_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(0))
+            if (Allow_Button(0, Pocket3))
             {
                 board.makeMove(4);
                 board.Log_Move(4);
@@ -231,7 +250,7 @@ namespace CS438_Mancala
         }
         private void Pocket4_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(0))
+            if (Allow_Button(0, Pocket4))
             {
                 board.makeMove(3);
                 board.Log_Move(3);
@@ -248,7 +267,7 @@ namespace CS438_Mancala
         }
         private void Pocket5_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(0))
+            if (Allow_Button(0, Pocket5))
             {
                 board.makeMove(2);
                 board.Log_Move(2);
@@ -265,7 +284,7 @@ namespace CS438_Mancala
         }
         private void Pocket6_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(0))
+            if (Allow_Button(0, Pocket6))
             {
                 board.makeMove(1);
                 board.Log_Move(1);
@@ -286,7 +305,7 @@ namespace CS438_Mancala
         }
         private void Pocket8_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(1))
+            if (Allow_Button(1, Pocket8))
             {
                 board.makeMove(1);
                 board.Log_Move(1);
@@ -303,7 +322,7 @@ namespace CS438_Mancala
         }
         private void Pocket9_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(1))
+            if (Allow_Button(1, Pocket9))
             {
                 board.makeMove(2);
                 board.Log_Move(2);
@@ -320,7 +339,7 @@ namespace CS438_Mancala
         }
         private void Pocket10_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(1))
+            if (Allow_Button(1, Pocket10))
             {
                 board.makeMove(3);
                 board.Log_Move(3);
@@ -337,7 +356,7 @@ namespace CS438_Mancala
         }
         private void Pocket11_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(1))
+            if (Allow_Button(1, Pocket11))
             {
                 board.makeMove(4);
                 board.Log_Move(4);
@@ -354,7 +373,7 @@ namespace CS438_Mancala
         }
         private void Pocket12_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(1))
+            if (Allow_Button(1, Pocket12))
             {
                 board.makeMove(5);
                 board.Log_Move(5);
@@ -371,7 +390,7 @@ namespace CS438_Mancala
         }
         private void Pocket13_Click(object sender, EventArgs e)
         {
-            if (Allow_Button(1))
+            if (Allow_Button(1, Pocket13))
             {
                 board.makeMove(6);
                 board.Log_Move(6);
@@ -411,7 +430,14 @@ namespace CS438_Mancala
         }
         private void Player1ConsoleWindowCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (console1WindowChecked == false)
+            {
+                console1WindowChecked = true;
+            }
+            else
+            {
+                console1WindowChecked = false;
+            }
         }
         private void Human2Button_Click(object sender, EventArgs e)
         {
@@ -434,7 +460,14 @@ namespace CS438_Mancala
         }
         private void Player2ConsoleWindowCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (console2WindowChecked == false)
+            {
+                console2WindowChecked = true;
+            }
+            else
+            {
+                console2WindowChecked = false;
+            }
         }
         private void StartButton_Click(object sender, EventArgs e)
         {

@@ -65,17 +65,8 @@ namespace CS438_Mancala
                 board.Print_Current_Board(path);
 
                 // run executable
-                ProcessStartInfo processStartInfo = new ProcessStartInfo();
-                processStartInfo.FileName = file;
-
-                using (Process process = new Process())
-                {
-                    process.StartInfo = processStartInfo;
-                    process.Start();
-                    //process.WaitForExit(timeToWaitInSeconds * 1000);
-                    process.Close();
-                }
-                //process.WaitForExit(timeToWaitInSeconds * 1000);
+                process = Process.Start(file);
+                process.WaitForExit(timeToWaitInSeconds * 1000);
                 
                 // read from move file
                 using (StreamReader sr = new StreamReader(path+"\\move.txt"))

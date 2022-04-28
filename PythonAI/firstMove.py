@@ -1,4 +1,22 @@
-from comm import get_game_state, put_move
+from pprint import pprint
+import sys
+
+def get_game_state():
+    board = []
+    turn = None
+    with open("board.txt", "r") as f:
+        row1 = [int(x) for x in f.readline().split()]
+        row2 = [int(x) for x in f.readline().split()]
+        turn = int(f.readline())
+    board.append(row1)
+    board.append(row2)
+
+    return board, turn
+
+def put_move(move):
+    with open("move.txt", "w") as f:
+        f.write(str(move))
+    sys.exit()  
 
 def legal(board, turn, move):
     tmp = None
@@ -15,15 +33,12 @@ def legal(board, turn, move):
 
     return True
 
-def main():
-    # get board
-    board, turn = get_game_state()
+# get board
+board, turn = get_game_state()
+for i in range(500000):
+    pprint(board)
+for i in range(1, len(board[0])):
+    if legal(board, turn, i):
+        print('Putting move', i)
+        put_move(i)
 
-    for i in range(1, len(board[0])):
-        if legal(board, turn, i):
-            print('Checking move', i)
-            put_move(i)
-            break
-
-if __name__ == "__main__":
-    main()

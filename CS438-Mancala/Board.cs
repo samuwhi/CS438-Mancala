@@ -9,7 +9,6 @@ namespace CS438_Mancala
 {
     public class Board
     {
-        private const string LOGFILENAME = "Mancala Log.txt";
         private const string BOARDFILENAME = "Board.txt";
 
         public int sv = 4;
@@ -17,6 +16,12 @@ namespace CS438_Mancala
         public int playerTurn;
         public bool gameEnd = false;
         public bool illegalMoveMade = false;
+
+        // All of these variables are used for logging
+        List<int[,]> states = new List<int[,]>();
+        public int turnNumber;
+        public int maxTurnNumber;
+        private const string LOGFILENAME = "Mancala Log.txt";
 
         public Board()
         {
@@ -31,6 +36,8 @@ namespace CS438_Mancala
             }
             var outFile = File.CreateText(LOGFILENAME);
             outFile.Close();
+            turnNumber = 0;
+            maxTurnNumber = turnNumber;
         }
 
         public void Print_Current_Board(string path)
@@ -77,6 +84,23 @@ namespace CS438_Mancala
             {
                 sw.WriteLine(move);
             }
+            states.Add(gameState);
+            turnNumber++;
+            maxTurnNumber++;
+        }
+
+        public void Step_Back()
+        {
+            if (turnNumber > 0)
+            {
+                turnNumber--;
+                gameState = states[turnNumber];
+            }
+        }
+
+        public void Step_Forward()
+        {
+
         }
 
         private void changeTurn()

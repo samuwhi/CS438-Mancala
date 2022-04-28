@@ -76,7 +76,7 @@ namespace CS438_Mancala
                 psi.CreateNoWindow = true;
                 psi.WindowStyle = ProcessWindowStyle.Hidden;
 
-                if (console1WindowChecked)
+                /*if (console1WindowChecked)
                 {
                     psi.CreateNoWindow = false;
                     psi.WindowStyle = ProcessWindowStyle.Normal;
@@ -85,7 +85,7 @@ namespace CS438_Mancala
                 {
                     psi.CreateNoWindow = false;
                     psi.WindowStyle = ProcessWindowStyle.Normal;
-                }
+                }*/
                 
                 
                 process = Process.Start(filename);
@@ -495,11 +495,13 @@ namespace CS438_Mancala
         }
         private void StepForwardButton_Click(object sender, EventArgs e)
         {
-
+            board.Step_Forward();
+            Update_Pockets();
         }
         private void StepBackButton_Click(object sender, EventArgs e)
         {
-
+            board.Step_Back();
+            Update_Pockets();
         }
 
         private void TimeToWaitDropdown_SelectedIndexChanged(object sender, EventArgs e)

@@ -70,8 +70,8 @@ namespace CS438_Mancala
                 string filename = Path.GetFileName(file);
                 ProcessStartInfo psi = new ProcessStartInfo();
                 psi.FileName = filename;
-                psi.UseShellExecute = false;
                 psi.CreateNoWindow = true;
+                psi.WindowStyle = ProcessWindowStyle.Hidden;
                 
                 process = Process.Start(psi);
                 process.WaitForExit();

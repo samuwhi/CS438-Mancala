@@ -61,20 +61,29 @@ namespace CS438_Mancala
                 }
 
                 path = Path.GetDirectoryName(file);
+                Directory.SetCurrentDirectory(path);
                 
                 // write out to text file
                 board.Print_Current_Board(path);
 
                 // run executable
-                process = Process.Start(file);
-                process.WaitForExit(timeToWaitInSeconds * 1000);
+                string filename = Path.GetFileName(file);
+                process = Process.Start(filename);
+                process.WaitForExit();
                 
                 // read from move file
-                using (StreamReader sr = new StreamReader(path+"\\move.txt"))
+                using (StreamReader sr = new StreamReader("move.txt"))
                 {
                     string line = sr.ReadLine();
                     move = int.Parse(line);
                 }
+
+                // Don't have to handle player 2 adjustments because it's handled in makeMove
+                if (board.playerTurn == 0)
+                {
+                    move = 7 - move;
+                }
+
                 board.makeMove(move);
                 Update_Pockets();
             }

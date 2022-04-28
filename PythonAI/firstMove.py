@@ -35,8 +35,6 @@ def legal(board, turn, move):
 
 # get board
 board, turn = get_game_state()
-for i in range(500000):
-    pprint(board)
 for i in range(1, len(board[0])):
     if legal(board, turn, i):
         print('Putting move', i)

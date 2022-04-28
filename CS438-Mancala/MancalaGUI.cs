@@ -388,6 +388,7 @@ namespace CS438_Mancala
         private void Human1Button_Click(object sender, EventArgs e)
         {
             HumanComputerLabel1.Text = "Human";
+            player1file = "";
         }
         private void Computer1Button_Click(object sender, EventArgs e)
         {
@@ -409,6 +410,7 @@ namespace CS438_Mancala
         private void Human2Button_Click(object sender, EventArgs e)
         {
             HumanComputerLabel2.Text = "Human";
+            player2file = "";
         }
         private void Computer2Button_Click(object sender, EventArgs e)
         {

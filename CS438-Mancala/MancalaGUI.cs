@@ -18,7 +18,7 @@ namespace CS438_Mancala
         public string fileName2 = "";
 
         private bool startButtonHasBeenPressed = false;
-        private int timeToWaitInSeconds = 1000000;
+        private int timeToWait = 1000000;
 
         public Board board;
         public Button[] player1Pockets;
@@ -68,7 +68,12 @@ namespace CS438_Mancala
 
                 // run executable
                 string filename = Path.GetFileName(file);
-                process = Process.Start(filename);
+                ProcessStartInfo psi = new ProcessStartInfo();
+                psi.FileName = filename;
+                psi.UseShellExecute = false;
+                psi.CreateNoWindow = true;
+                
+                process = Process.Start(psi);
                 process.WaitForExit();
                 
                 // read from move file
@@ -460,23 +465,23 @@ namespace CS438_Mancala
 
             if (waitTimeString == "5 seconds")
             {
-                timeToWaitInSeconds = 5;
+                timeToWait = 5000;
             }
             else if (waitTimeString == "10 seconds")
             {
-                timeToWaitInSeconds = 10;
+                timeToWait = 10000;
             }
             else if (waitTimeString == "20 seconds")
             {
-                timeToWaitInSeconds = 20;
+                timeToWait = 20000;
             }
             else if (waitTimeString == "1 minute")
             {
-                timeToWaitInSeconds = 60;
+                timeToWait = 60000;
             }
             else
             {
-                timeToWaitInSeconds = 1000000;
+                timeToWait = 100000000;
             }
         }
     }

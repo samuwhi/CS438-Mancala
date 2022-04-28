@@ -27,6 +27,10 @@ namespace CS438_Mancala
         {
             gameState = new int[,] {   {0, sv, sv, sv, sv, sv, sv}, 
                                             {sv, sv, sv, sv, sv, sv, 0 } };
+
+            int[,] temp = (int[,])gameState.Clone();
+            states.Add(temp);
+
             playerTurn = 0;
 
             // Create new log file
@@ -92,6 +96,7 @@ namespace CS438_Mancala
 
         public void Step_Back()
         {
+            gameEnd = false;
             if (turnNumber > 0)
             {
                 turnNumber--;
@@ -101,7 +106,7 @@ namespace CS438_Mancala
 
         public void Step_Forward()
         {
-            if (maxTurnNumber > 0 && turnNumber <= maxTurnNumber)
+            if (maxTurnNumber > 0 && turnNumber < maxTurnNumber)
             {
                 turnNumber++;
                 gameState = states[turnNumber];

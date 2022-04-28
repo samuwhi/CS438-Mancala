@@ -36,6 +36,8 @@ namespace CS438_Mancala
 
         private static string player1file = "";
         private static string player2file = "";
+
+        private bool gameEndHasBeenHit = false;
         public MancalaGUI()
         {
             InitializeComponent();
@@ -136,6 +138,7 @@ namespace CS438_Mancala
 
             if (board.gameEnd == true)
             {
+                gameEndHasBeenHit = true;
                 GameEndForm gameEndForm = new GameEndForm(board.gameState[0, 0], board.gameState[1, 6]);
                 gameEndForm.Show();
                 return;
@@ -172,6 +175,11 @@ namespace CS438_Mancala
             }
 
             if (board.gameEnd == true)
+            {
+                return false;
+            }
+
+            if (gameEndHasBeenHit == true)
             {
                 return false;
             }
@@ -482,6 +490,7 @@ namespace CS438_Mancala
         private void StartButton_Click(object sender, EventArgs e)
         {
             startButtonHasBeenPressed = true;
+            gameEndHasBeenHit = false;
             CurrentPlayerTurnButton.BackColor = board1Color;
 
             //This needs fixed, got to wait for whoevers turn to be over with before starting up.
@@ -492,6 +501,7 @@ namespace CS438_Mancala
         }
         private void ResetButton_Click(object sender, EventArgs e)
         {
+            gameEndHasBeenHit = false;
             board = new Board();
             Update_Pockets();
             startButtonHasBeenPressed = false;

@@ -87,8 +87,14 @@ namespace CS438_Mancala
                     psi.WindowStyle = ProcessWindowStyle.Normal;
                 }
                 
-                process = Process.Start(psi);
-                process.WaitForExit();
+                
+                process = Process.Start(filename);
+                if (!process.WaitForExit(timeToWait))
+                {
+                    Timeout to = new Timeout();
+                    to.Show();
+                    System.Environment.Exit(1);
+                }
                 
                 // read from move file
                 using (StreamReader sr = new StreamReader("move.txt"))

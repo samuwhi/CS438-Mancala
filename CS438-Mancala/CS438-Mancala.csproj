@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board.cs" />
+    <Compile Include="Timeout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timeout.Designer.cs">
+      <DependentUpon>Timeout.cs</DependentUpon>
+    </Compile>
     <Compile Include="IllegalMoveMadeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Timeout.resx">
+      <DependentUpon>Timeout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameEndForm.resx">
       <DependentUpon>GameEndForm.cs</DependentUpon>
     </EmbeddedResource>

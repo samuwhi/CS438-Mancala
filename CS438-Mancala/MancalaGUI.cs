@@ -68,13 +68,15 @@ namespace CS438_Mancala
 
                 // run executable
                 string filename = Path.GetFileName(file);
-                ProcessStartInfo psi = new ProcessStartInfo();
-                psi.FileName = filename;
-                psi.UseShellExecute = false;
-                psi.CreateNoWindow = true;
                 
-                process = Process.Start(psi);
-                process.WaitForExit();
+                
+                process = Process.Start(filename);
+                if (!process.WaitForExit(timeToWait))
+                {
+                    Timeout to = new Timeout();
+                    to.Show();
+                    System.Environment.Exit(1);
+                }
                 
                 // read from move file
                 using (StreamReader sr = new StreamReader("move.txt"))

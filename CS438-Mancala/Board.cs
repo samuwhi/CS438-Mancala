@@ -49,12 +49,12 @@ namespace CS438_Mancala
 
             for (int i = 0; i < gameState.GetLength(1); ++i)
             {
-                line1 += gameState[0, i].ToString();
+                line1 += gameState[0, i].ToString() + ' ';
             }
 
             for (int i = 0; i < gameState.GetLength(1); ++i)
             {
-                line2 += gameState[1, i].ToString();
+                line2 += gameState[1, i].ToString() + ' ';
             }
 
             line3 = playerTurn.ToString();

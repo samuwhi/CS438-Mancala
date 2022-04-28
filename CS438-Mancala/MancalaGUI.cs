@@ -67,7 +67,6 @@ namespace CS438_Mancala
 
                 // run executable
                 process = Process.Start(file);
-                process.WaitForExit(3000);
                 
                 // read from move file
                 using (StreamReader sr = new StreamReader(path+"\\move.txt"))
@@ -392,7 +391,7 @@ namespace CS438_Mancala
         private void Computer2Button_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Exe Files (.exe)|*.exe|All Files (*.*)|*.*";
+            openFileDialog.Filter = "Exe Files (.exe)|*.exe|Python Files (.py)|*.py|All Files (*.*)|*.*";
 
             DialogResult result = openFileDialog.ShowDialog();
             if (result == DialogResult.OK)

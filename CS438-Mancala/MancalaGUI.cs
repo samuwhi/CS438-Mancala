@@ -392,7 +392,7 @@ namespace CS438_Mancala
         private void Computer2Button_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Exe Files (.exe)|*.exe|All Files (*.*)|*.*";
+            openFileDialog.Filter = "Exe Files (.exe)|*.exe|Python Files (.py)|*.py|All Files (*.*)|*.*";
 
             DialogResult result = openFileDialog.ShowDialog();
             if (result == DialogResult.OK)

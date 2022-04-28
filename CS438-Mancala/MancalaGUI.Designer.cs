@@ -83,11 +83,11 @@
             this.Player1Box.Controls.Add(this.Score1Label);
             this.Player1Box.Controls.Add(this.Computer1Button);
             this.Player1Box.Controls.Add(this.Human1Button);
-            this.Player1Box.Location = new System.Drawing.Point(9, 24);
-            this.Player1Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player1Box.Location = new System.Drawing.Point(12, 30);
+            this.Player1Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Player1Box.Name = "Player1Box";
-            this.Player1Box.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Player1Box.Size = new System.Drawing.Size(235, 150);
+            this.Player1Box.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Player1Box.Size = new System.Drawing.Size(313, 185);
             this.Player1Box.TabIndex = 15;
             this.Player1Box.TabStop = false;
             this.Player1Box.Text = "Player 1";
@@ -95,20 +95,19 @@
             // HumanComputerLabel1
             // 
             this.HumanComputerLabel1.AutoSize = true;
-            this.HumanComputerLabel1.Location = new System.Drawing.Point(4, 43);
-            this.HumanComputerLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.HumanComputerLabel1.Location = new System.Drawing.Point(5, 53);
             this.HumanComputerLabel1.Name = "HumanComputerLabel1";
-            this.HumanComputerLabel1.Size = new System.Drawing.Size(41, 13);
+            this.HumanComputerLabel1.Size = new System.Drawing.Size(50, 16);
             this.HumanComputerLabel1.TabIndex = 6;
             this.HumanComputerLabel1.Text = "Human";
             // 
             // Player1ConsoleWindowCheck
             // 
             this.Player1ConsoleWindowCheck.AutoSize = true;
-            this.Player1ConsoleWindowCheck.Location = new System.Drawing.Point(4, 100);
-            this.Player1ConsoleWindowCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player1ConsoleWindowCheck.Location = new System.Drawing.Point(5, 123);
+            this.Player1ConsoleWindowCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Player1ConsoleWindowCheck.Name = "Player1ConsoleWindowCheck";
-            this.Player1ConsoleWindowCheck.Size = new System.Drawing.Size(181, 17);
+            this.Player1ConsoleWindowCheck.Size = new System.Drawing.Size(225, 20);
             this.Player1ConsoleWindowCheck.TabIndex = 4;
             this.Player1ConsoleWindowCheck.Text = "Show Player1\'s Console Window";
             this.Player1ConsoleWindowCheck.UseVisualStyleBackColor = true;
@@ -117,10 +116,9 @@
             // Score1Text
             // 
             this.Score1Text.AutoSize = true;
-            this.Score1Text.Location = new System.Drawing.Point(42, 56);
-            this.Score1Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Score1Text.Location = new System.Drawing.Point(56, 69);
             this.Score1Text.Name = "Score1Text";
-            this.Score1Text.Size = new System.Drawing.Size(13, 13);
+            this.Score1Text.Size = new System.Drawing.Size(14, 16);
             this.Score1Text.TabIndex = 3;
             this.Score1Text.Text = "0";
             this.Score1Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -128,19 +126,18 @@
             // Score1Label
             // 
             this.Score1Label.AutoSize = true;
-            this.Score1Label.Location = new System.Drawing.Point(6, 57);
-            this.Score1Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Score1Label.Location = new System.Drawing.Point(8, 70);
             this.Score1Label.Name = "Score1Label";
-            this.Score1Label.Size = new System.Drawing.Size(38, 13);
+            this.Score1Label.Size = new System.Drawing.Size(46, 16);
             this.Score1Label.TabIndex = 2;
             this.Score1Label.Text = "Score:";
             // 
             // Computer1Button
             // 
-            this.Computer1Button.Location = new System.Drawing.Point(133, 17);
-            this.Computer1Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Computer1Button.Location = new System.Drawing.Point(177, 21);
+            this.Computer1Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Computer1Button.Name = "Computer1Button";
-            this.Computer1Button.Size = new System.Drawing.Size(98, 24);
+            this.Computer1Button.Size = new System.Drawing.Size(131, 30);
             this.Computer1Button.TabIndex = 1;
             this.Computer1Button.Text = "Computer";
             this.Computer1Button.UseVisualStyleBackColor = true;
@@ -148,10 +145,10 @@
             // 
             // Human1Button
             // 
-            this.Human1Button.Location = new System.Drawing.Point(4, 17);
-            this.Human1Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Human1Button.Location = new System.Drawing.Point(5, 21);
+            this.Human1Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Human1Button.Name = "Human1Button";
-            this.Human1Button.Size = new System.Drawing.Size(98, 24);
+            this.Human1Button.Size = new System.Drawing.Size(131, 30);
             this.Human1Button.TabIndex = 0;
             this.Human1Button.Text = "Human";
             this.Human1Button.UseVisualStyleBackColor = true;
@@ -165,12 +162,12 @@
             this.Player2Box.Controls.Add(this.Score2Label);
             this.Player2Box.Controls.Add(this.Computer2Button);
             this.Player2Box.Controls.Add(this.Human2Button);
-            this.Player2Box.Location = new System.Drawing.Point(9, 192);
-            this.Player2Box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player2Box.Location = new System.Drawing.Point(12, 236);
+            this.Player2Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Player2Box.Name = "Player2Box";
-            this.Player2Box.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player2Box.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Player2Box.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Player2Box.Size = new System.Drawing.Size(235, 150);
+            this.Player2Box.Size = new System.Drawing.Size(313, 185);
             this.Player2Box.TabIndex = 16;
             this.Player2Box.TabStop = false;
             this.Player2Box.Text = "Player 2";
@@ -178,20 +175,19 @@
             // HumanComputerLabel2
             // 
             this.HumanComputerLabel2.AutoSize = true;
-            this.HumanComputerLabel2.Location = new System.Drawing.Point(6, 42);
-            this.HumanComputerLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.HumanComputerLabel2.Location = new System.Drawing.Point(8, 52);
             this.HumanComputerLabel2.Name = "HumanComputerLabel2";
-            this.HumanComputerLabel2.Size = new System.Drawing.Size(41, 13);
+            this.HumanComputerLabel2.Size = new System.Drawing.Size(50, 16);
             this.HumanComputerLabel2.TabIndex = 5;
             this.HumanComputerLabel2.Text = "Human";
             // 
             // Player2ConsoleWindowCheck
             // 
             this.Player2ConsoleWindowCheck.AutoSize = true;
-            this.Player2ConsoleWindowCheck.Location = new System.Drawing.Point(4, 100);
-            this.Player2ConsoleWindowCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player2ConsoleWindowCheck.Location = new System.Drawing.Point(5, 123);
+            this.Player2ConsoleWindowCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Player2ConsoleWindowCheck.Name = "Player2ConsoleWindowCheck";
-            this.Player2ConsoleWindowCheck.Size = new System.Drawing.Size(181, 17);
+            this.Player2ConsoleWindowCheck.Size = new System.Drawing.Size(225, 20);
             this.Player2ConsoleWindowCheck.TabIndex = 4;
             this.Player2ConsoleWindowCheck.Text = "Show Player2\'s Console Window";
             this.Player2ConsoleWindowCheck.UseVisualStyleBackColor = true;
@@ -200,10 +196,9 @@
             // Score2Text
             // 
             this.Score2Text.AutoSize = true;
-            this.Score2Text.Location = new System.Drawing.Point(45, 55);
-            this.Score2Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Score2Text.Location = new System.Drawing.Point(60, 68);
             this.Score2Text.Name = "Score2Text";
-            this.Score2Text.Size = new System.Drawing.Size(13, 13);
+            this.Score2Text.Size = new System.Drawing.Size(14, 16);
             this.Score2Text.TabIndex = 3;
             this.Score2Text.Text = "0";
             this.Score2Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -211,19 +206,18 @@
             // Score2Label
             // 
             this.Score2Label.AutoSize = true;
-            this.Score2Label.Location = new System.Drawing.Point(6, 55);
-            this.Score2Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Score2Label.Location = new System.Drawing.Point(8, 68);
             this.Score2Label.Name = "Score2Label";
-            this.Score2Label.Size = new System.Drawing.Size(38, 13);
+            this.Score2Label.Size = new System.Drawing.Size(46, 16);
             this.Score2Label.TabIndex = 2;
             this.Score2Label.Text = "Score:";
             // 
             // Computer2Button
             // 
-            this.Computer2Button.Location = new System.Drawing.Point(133, 17);
-            this.Computer2Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Computer2Button.Location = new System.Drawing.Point(177, 21);
+            this.Computer2Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Computer2Button.Name = "Computer2Button";
-            this.Computer2Button.Size = new System.Drawing.Size(98, 23);
+            this.Computer2Button.Size = new System.Drawing.Size(131, 28);
             this.Computer2Button.TabIndex = 1;
             this.Computer2Button.Text = "Computer";
             this.Computer2Button.UseVisualStyleBackColor = true;
@@ -231,10 +225,10 @@
             // 
             // Human2Button
             // 
-            this.Human2Button.Location = new System.Drawing.Point(4, 17);
-            this.Human2Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Human2Button.Location = new System.Drawing.Point(5, 21);
+            this.Human2Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Human2Button.Name = "Human2Button";
-            this.Human2Button.Size = new System.Drawing.Size(98, 23);
+            this.Human2Button.Size = new System.Drawing.Size(131, 28);
             this.Human2Button.TabIndex = 0;
             this.Human2Button.Text = "Human";
             this.Human2Button.UseVisualStyleBackColor = true;
@@ -248,12 +242,12 @@
             this.ControlBox.Controls.Add(this.StepForwardButton);
             this.ControlBox.Controls.Add(this.ResetButton);
             this.ControlBox.Controls.Add(this.StartButton);
-            this.ControlBox.Location = new System.Drawing.Point(9, 356);
-            this.ControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ControlBox.Location = new System.Drawing.Point(12, 438);
+            this.ControlBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ControlBox.Name = "ControlBox";
-            this.ControlBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ControlBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ControlBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ControlBox.Size = new System.Drawing.Size(235, 150);
+            this.ControlBox.Size = new System.Drawing.Size(313, 185);
             this.ControlBox.TabIndex = 17;
             this.ControlBox.TabStop = false;
             this.ControlBox.Text = "Control";
@@ -261,12 +255,11 @@
             // TimeToWaitLabel
             // 
             this.TimeToWaitLabel.AutoSize = true;
-            this.TimeToWaitLabel.Location = new System.Drawing.Point(130, 63);
-            this.TimeToWaitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TimeToWaitLabel.Location = new System.Drawing.Point(173, 78);
             this.TimeToWaitLabel.Name = "TimeToWaitLabel";
-            this.TimeToWaitLabel.Size = new System.Drawing.Size(68, 13);
+            this.TimeToWaitLabel.Size = new System.Drawing.Size(92, 16);
             this.TimeToWaitLabel.TabIndex = 21;
-            this.TimeToWaitLabel.Text = "AI Wait Time";
+            this.TimeToWaitLabel.Text = "Time Per Turn";
             // 
             // TimeToWaitDropdown
             // 
@@ -277,19 +270,19 @@
             "20 seconds",
             "1 minute",
             "No Limit"});
-            this.TimeToWaitDropdown.Location = new System.Drawing.Point(133, 78);
-            this.TimeToWaitDropdown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TimeToWaitDropdown.Location = new System.Drawing.Point(177, 96);
+            this.TimeToWaitDropdown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TimeToWaitDropdown.Name = "TimeToWaitDropdown";
-            this.TimeToWaitDropdown.Size = new System.Drawing.Size(98, 21);
+            this.TimeToWaitDropdown.Size = new System.Drawing.Size(129, 24);
             this.TimeToWaitDropdown.TabIndex = 20;
             this.TimeToWaitDropdown.SelectedIndexChanged += new System.EventHandler(this.TimeToWaitDropdown_SelectedIndexChanged);
             // 
             // StepBackButton
             // 
-            this.StepBackButton.Location = new System.Drawing.Point(4, 106);
-            this.StepBackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StepBackButton.Location = new System.Drawing.Point(5, 130);
+            this.StepBackButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StepBackButton.Name = "StepBackButton";
-            this.StepBackButton.Size = new System.Drawing.Size(112, 22);
+            this.StepBackButton.Size = new System.Drawing.Size(149, 27);
             this.StepBackButton.TabIndex = 3;
             this.StepBackButton.Text = "Step Backward in Log";
             this.StepBackButton.UseVisualStyleBackColor = true;
@@ -297,10 +290,10 @@
             // 
             // StepForwardButton
             // 
-            this.StepForwardButton.Location = new System.Drawing.Point(4, 67);
-            this.StepForwardButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StepForwardButton.Location = new System.Drawing.Point(5, 82);
+            this.StepForwardButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StepForwardButton.Name = "StepForwardButton";
-            this.StepForwardButton.Size = new System.Drawing.Size(112, 22);
+            this.StepForwardButton.Size = new System.Drawing.Size(149, 27);
             this.StepForwardButton.TabIndex = 2;
             this.StepForwardButton.Text = "Step Forward in Log";
             this.StepForwardButton.UseVisualStyleBackColor = true;
@@ -308,10 +301,10 @@
             // 
             // ResetButton
             // 
-            this.ResetButton.Location = new System.Drawing.Point(133, 29);
-            this.ResetButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResetButton.Location = new System.Drawing.Point(177, 36);
+            this.ResetButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(98, 19);
+            this.ResetButton.Size = new System.Drawing.Size(131, 23);
             this.ResetButton.TabIndex = 1;
             this.ResetButton.Text = "Reset Game";
             this.ResetButton.UseVisualStyleBackColor = true;
@@ -319,10 +312,10 @@
             // 
             // StartButton
             // 
-            this.StartButton.Location = new System.Drawing.Point(4, 29);
-            this.StartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StartButton.Location = new System.Drawing.Point(5, 36);
+            this.StartButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(98, 19);
+            this.StartButton.Size = new System.Drawing.Size(131, 23);
             this.StartButton.TabIndex = 0;
             this.StartButton.Text = "Start Game";
             this.StartButton.UseVisualStyleBackColor = true;
@@ -333,20 +326,19 @@
             this.CurrentPlayersTurnLabel.AutoSize = true;
             this.CurrentPlayersTurnLabel.BackColor = System.Drawing.Color.Wheat;
             this.CurrentPlayersTurnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.CurrentPlayersTurnLabel.Location = new System.Drawing.Point(435, 232);
-            this.CurrentPlayersTurnLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.CurrentPlayersTurnLabel.Location = new System.Drawing.Point(580, 286);
             this.CurrentPlayersTurnLabel.Name = "CurrentPlayersTurnLabel";
-            this.CurrentPlayersTurnLabel.Size = new System.Drawing.Size(286, 31);
+            this.CurrentPlayersTurnLabel.Size = new System.Drawing.Size(356, 39);
             this.CurrentPlayersTurnLabel.TabIndex = 18;
             this.CurrentPlayersTurnLabel.Text = "Current Player\'s Turn: ";
             // 
             // CurrentPlayerTurnButton
             // 
             this.CurrentPlayerTurnButton.BackColor = System.Drawing.Color.LightGray;
-            this.CurrentPlayerTurnButton.Location = new System.Drawing.Point(753, 209);
-            this.CurrentPlayerTurnButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CurrentPlayerTurnButton.Location = new System.Drawing.Point(1004, 257);
+            this.CurrentPlayerTurnButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CurrentPlayerTurnButton.Name = "CurrentPlayerTurnButton";
-            this.CurrentPlayerTurnButton.Size = new System.Drawing.Size(75, 81);
+            this.CurrentPlayerTurnButton.Size = new System.Drawing.Size(100, 100);
             this.CurrentPlayerTurnButton.TabIndex = 19;
             this.CurrentPlayerTurnButton.UseVisualStyleBackColor = false;
             // 
@@ -354,10 +346,10 @@
             // 
             this.BackgroundImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImage.Image = ((System.Drawing.Image)(resources.GetObject("BackgroundImage.Image")));
-            this.BackgroundImage.Location = new System.Drawing.Point(311, 24);
-            this.BackgroundImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackgroundImage.Location = new System.Drawing.Point(415, 30);
+            this.BackgroundImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BackgroundImage.Name = "BackgroundImage";
-            this.BackgroundImage.Size = new System.Drawing.Size(720, 452);
+            this.BackgroundImage.Size = new System.Drawing.Size(960, 556);
             this.BackgroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BackgroundImage.TabIndex = 20;
             this.BackgroundImage.TabStop = false;
@@ -366,10 +358,10 @@
             // 
             this.Pocket7.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.Pocket7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket7.Location = new System.Drawing.Point(311, 153);
-            this.Pocket7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket7.Location = new System.Drawing.Point(415, 188);
+            this.Pocket7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket7.Name = "Pocket7";
-            this.Pocket7.Size = new System.Drawing.Size(105, 190);
+            this.Pocket7.Size = new System.Drawing.Size(140, 234);
             this.Pocket7.TabIndex = 27;
             this.Pocket7.Text = "0";
             this.Pocket7.UseVisualStyleBackColor = false;
@@ -378,10 +370,10 @@
             // 
             this.Pocket6.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.Pocket6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket6.Location = new System.Drawing.Point(382, 50);
-            this.Pocket6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket6.Location = new System.Drawing.Point(509, 62);
+            this.Pocket6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket6.Name = "Pocket6";
-            this.Pocket6.Size = new System.Drawing.Size(92, 133);
+            this.Pocket6.Size = new System.Drawing.Size(123, 164);
             this.Pocket6.TabIndex = 26;
             this.Pocket6.Text = "0";
             this.Pocket6.UseVisualStyleBackColor = false;
@@ -394,10 +386,10 @@
             // 
             this.Pocket5.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.Pocket5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket5.Location = new System.Drawing.Point(478, 50);
-            this.Pocket5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket5.Location = new System.Drawing.Point(637, 62);
+            this.Pocket5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket5.Name = "Pocket5";
-            this.Pocket5.Size = new System.Drawing.Size(92, 133);
+            this.Pocket5.Size = new System.Drawing.Size(123, 164);
             this.Pocket5.TabIndex = 25;
             this.Pocket5.Text = "0";
             this.Pocket5.UseVisualStyleBackColor = false;
@@ -410,10 +402,10 @@
             // 
             this.Pocket4.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.Pocket4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket4.Location = new System.Drawing.Point(574, 50);
-            this.Pocket4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket4.Location = new System.Drawing.Point(765, 62);
+            this.Pocket4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket4.Name = "Pocket4";
-            this.Pocket4.Size = new System.Drawing.Size(92, 133);
+            this.Pocket4.Size = new System.Drawing.Size(123, 164);
             this.Pocket4.TabIndex = 24;
             this.Pocket4.Text = "0";
             this.Pocket4.UseVisualStyleBackColor = false;
@@ -426,10 +418,10 @@
             // 
             this.Pocket3.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.Pocket3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket3.Location = new System.Drawing.Point(670, 50);
-            this.Pocket3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket3.Location = new System.Drawing.Point(893, 62);
+            this.Pocket3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket3.Name = "Pocket3";
-            this.Pocket3.Size = new System.Drawing.Size(92, 133);
+            this.Pocket3.Size = new System.Drawing.Size(123, 164);
             this.Pocket3.TabIndex = 23;
             this.Pocket3.Text = "0";
             this.Pocket3.UseVisualStyleBackColor = false;
@@ -442,10 +434,10 @@
             // 
             this.Pocket2.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.Pocket2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket2.Location = new System.Drawing.Point(766, 50);
-            this.Pocket2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket2.Location = new System.Drawing.Point(1021, 62);
+            this.Pocket2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket2.Name = "Pocket2";
-            this.Pocket2.Size = new System.Drawing.Size(92, 133);
+            this.Pocket2.Size = new System.Drawing.Size(123, 164);
             this.Pocket2.TabIndex = 22;
             this.Pocket2.Text = "0";
             this.Pocket2.UseVisualStyleBackColor = false;
@@ -458,10 +450,10 @@
             // 
             this.Pocket1.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.Pocket1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket1.Location = new System.Drawing.Point(862, 50);
-            this.Pocket1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket1.Location = new System.Drawing.Point(1149, 62);
+            this.Pocket1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket1.Name = "Pocket1";
-            this.Pocket1.Size = new System.Drawing.Size(92, 133);
+            this.Pocket1.Size = new System.Drawing.Size(123, 164);
             this.Pocket1.TabIndex = 21;
             this.Pocket1.Text = "0";
             this.Pocket1.UseVisualStyleBackColor = false;
@@ -474,10 +466,10 @@
             // 
             this.Pocket8.BackColor = System.Drawing.Color.Salmon;
             this.Pocket8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket8.Location = new System.Drawing.Point(382, 322);
-            this.Pocket8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket8.Location = new System.Drawing.Point(509, 396);
+            this.Pocket8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket8.Name = "Pocket8";
-            this.Pocket8.Size = new System.Drawing.Size(92, 133);
+            this.Pocket8.Size = new System.Drawing.Size(123, 164);
             this.Pocket8.TabIndex = 28;
             this.Pocket8.Text = "0";
             this.Pocket8.UseVisualStyleBackColor = false;
@@ -490,10 +482,10 @@
             // 
             this.Pocket9.BackColor = System.Drawing.Color.Salmon;
             this.Pocket9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket9.Location = new System.Drawing.Point(478, 322);
-            this.Pocket9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket9.Location = new System.Drawing.Point(637, 396);
+            this.Pocket9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket9.Name = "Pocket9";
-            this.Pocket9.Size = new System.Drawing.Size(92, 133);
+            this.Pocket9.Size = new System.Drawing.Size(123, 164);
             this.Pocket9.TabIndex = 29;
             this.Pocket9.Text = "0";
             this.Pocket9.UseVisualStyleBackColor = false;
@@ -506,10 +498,10 @@
             // 
             this.Pocket10.BackColor = System.Drawing.Color.Salmon;
             this.Pocket10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket10.Location = new System.Drawing.Point(574, 322);
-            this.Pocket10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket10.Location = new System.Drawing.Point(765, 396);
+            this.Pocket10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket10.Name = "Pocket10";
-            this.Pocket10.Size = new System.Drawing.Size(92, 133);
+            this.Pocket10.Size = new System.Drawing.Size(123, 164);
             this.Pocket10.TabIndex = 30;
             this.Pocket10.Text = "0";
             this.Pocket10.UseVisualStyleBackColor = false;
@@ -522,10 +514,10 @@
             // 
             this.Pocket11.BackColor = System.Drawing.Color.Salmon;
             this.Pocket11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket11.Location = new System.Drawing.Point(670, 322);
-            this.Pocket11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket11.Location = new System.Drawing.Point(893, 396);
+            this.Pocket11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket11.Name = "Pocket11";
-            this.Pocket11.Size = new System.Drawing.Size(92, 133);
+            this.Pocket11.Size = new System.Drawing.Size(123, 164);
             this.Pocket11.TabIndex = 31;
             this.Pocket11.Text = "0";
             this.Pocket11.UseVisualStyleBackColor = false;
@@ -538,10 +530,10 @@
             // 
             this.Pocket12.BackColor = System.Drawing.Color.Salmon;
             this.Pocket12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket12.Location = new System.Drawing.Point(766, 322);
-            this.Pocket12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket12.Location = new System.Drawing.Point(1021, 396);
+            this.Pocket12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket12.Name = "Pocket12";
-            this.Pocket12.Size = new System.Drawing.Size(92, 133);
+            this.Pocket12.Size = new System.Drawing.Size(123, 164);
             this.Pocket12.TabIndex = 32;
             this.Pocket12.Text = "0";
             this.Pocket12.UseVisualStyleBackColor = false;
@@ -554,10 +546,10 @@
             // 
             this.Pocket13.BackColor = System.Drawing.Color.Salmon;
             this.Pocket13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket13.Location = new System.Drawing.Point(862, 322);
-            this.Pocket13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket13.Location = new System.Drawing.Point(1149, 396);
+            this.Pocket13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket13.Name = "Pocket13";
-            this.Pocket13.Size = new System.Drawing.Size(92, 133);
+            this.Pocket13.Size = new System.Drawing.Size(123, 164);
             this.Pocket13.TabIndex = 33;
             this.Pocket13.Text = "0";
             this.Pocket13.UseVisualStyleBackColor = false;
@@ -570,10 +562,10 @@
             // 
             this.Pocket14.BackColor = System.Drawing.Color.Salmon;
             this.Pocket14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Pocket14.Location = new System.Drawing.Point(919, 153);
-            this.Pocket14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pocket14.Location = new System.Drawing.Point(1225, 188);
+            this.Pocket14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pocket14.Name = "Pocket14";
-            this.Pocket14.Size = new System.Drawing.Size(105, 190);
+            this.Pocket14.Size = new System.Drawing.Size(140, 234);
             this.Pocket14.TabIndex = 34;
             this.Pocket14.Text = "0";
             this.Pocket14.UseVisualStyleBackColor = false;
@@ -582,9 +574,10 @@
             // 
             this.Player1Label.AutoSize = true;
             this.Player1Label.BackColor = System.Drawing.Color.Wheat;
-            this.Player1Label.Location = new System.Drawing.Point(335, 105);
+            this.Player1Label.Location = new System.Drawing.Point(447, 129);
+            this.Player1Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Player1Label.Name = "Player1Label";
-            this.Player1Label.Size = new System.Drawing.Size(42, 13);
+            this.Player1Label.Size = new System.Drawing.Size(53, 16);
             this.Player1Label.TabIndex = 35;
             this.Player1Label.Text = "Player1";
             // 
@@ -592,17 +585,18 @@
             // 
             this.Player2Label.AutoSize = true;
             this.Player2Label.BackColor = System.Drawing.Color.Wheat;
-            this.Player2Label.Location = new System.Drawing.Point(335, 391);
+            this.Player2Label.Location = new System.Drawing.Point(447, 481);
+            this.Player2Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Player2Label.Name = "Player2Label";
-            this.Player2Label.Size = new System.Drawing.Size(42, 13);
+            this.Player2Label.Size = new System.Drawing.Size(53, 16);
             this.Player2Label.TabIndex = 36;
             this.Player2Label.Text = "Player2";
             // 
             // MancalaGUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 524);
+            this.ClientSize = new System.Drawing.Size(1387, 645);
             this.Controls.Add(this.Player2Label);
             this.Controls.Add(this.Player1Label);
             this.Controls.Add(this.Pocket14);
@@ -625,7 +619,7 @@
             this.Controls.Add(this.Player2Box);
             this.Controls.Add(this.Player1Box);
             this.Controls.Add(this.BackgroundImage);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MancalaGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mancala";

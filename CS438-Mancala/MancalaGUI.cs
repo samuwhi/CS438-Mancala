@@ -50,7 +50,7 @@ namespace CS438_Mancala
             string file;
             int move;
 
-            if ((board.playerTurn == 0 && player1human == false) | (board.playerTurn == 1 && player2human == false))
+            if ((board.playerTurn == 0 && player1human == false) || (board.playerTurn == 1 && player2human == false))
             {
                 if (board.playerTurn == 0)
                 {
@@ -67,7 +67,7 @@ namespace CS438_Mancala
 
                 // run executable
                 process = Process.Start(file);
-                process.WaitForExit(3000);
+                process.WaitForExit(timeToWaitInSeconds * 1000);
                 
                 // read from move file
                 using (StreamReader sr = new StreamReader(path+"\\move.txt"))

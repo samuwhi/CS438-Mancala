@@ -77,6 +77,7 @@
             // 
             // Player1Box
             // 
+            this.Player1Box.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.Player1Box.Controls.Add(this.HumanComputerLabel1);
             this.Player1Box.Controls.Add(this.Player1ConsoleWindowCheck);
             this.Player1Box.Controls.Add(this.Score1Text);
@@ -145,17 +146,19 @@
             // 
             // Human1Button
             // 
+            this.Human1Button.BackColor = System.Drawing.SystemColors.Menu;
             this.Human1Button.Location = new System.Drawing.Point(5, 21);
             this.Human1Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Human1Button.Name = "Human1Button";
             this.Human1Button.Size = new System.Drawing.Size(131, 30);
             this.Human1Button.TabIndex = 0;
             this.Human1Button.Text = "Human";
-            this.Human1Button.UseVisualStyleBackColor = true;
+            this.Human1Button.UseVisualStyleBackColor = false;
             this.Human1Button.Click += new System.EventHandler(this.Human1Button_Click);
             // 
             // Player2Box
             // 
+            this.Player2Box.BackColor = System.Drawing.Color.Salmon;
             this.Player2Box.Controls.Add(this.HumanComputerLabel2);
             this.Player2Box.Controls.Add(this.Player2ConsoleWindowCheck);
             this.Player2Box.Controls.Add(this.Score2Text);

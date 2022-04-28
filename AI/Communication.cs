@@ -34,11 +34,15 @@ namespace AI
 
         public static bool putMove(int pocket)
         {
-            using (StreamWriter writer = new StreamWriter(MOVEFILE))
+            if (File.Exists(MOVEFILE))
             {
-                writer.WriteLine(pocket);
-            
+                File.Delete(MOVEFILE);
             }
+            StreamWriter writer = File.CreateText(MOVEFILE);
+            writer.WriteLine(pocket);
+
+            writer.Close();
+            
             System.Environment.Exit(0);
             return true;
         }

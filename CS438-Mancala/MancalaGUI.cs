@@ -45,6 +45,7 @@ namespace CS438_Mancala
 
         private void Get_Next_Turn()
         {
+            Process process;
             string path;
             string file;
             int move;

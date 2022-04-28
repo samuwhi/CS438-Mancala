@@ -84,7 +84,8 @@ namespace CS438_Mancala
             {
                 sw.WriteLine(move);
             }
-            states.Add(gameState);
+            int[,] temp = (int[,]) gameState.Clone();
+            states.Add(temp);
             turnNumber++;
             maxTurnNumber++;
         }
@@ -100,7 +101,11 @@ namespace CS438_Mancala
 
         public void Step_Forward()
         {
-
+            if (maxTurnNumber > 0 && turnNumber <= maxTurnNumber)
+            {
+                turnNumber++;
+                gameState = states[turnNumber];
+            }
         }
 
         private void changeTurn()

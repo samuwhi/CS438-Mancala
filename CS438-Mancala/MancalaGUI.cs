@@ -45,7 +45,6 @@ namespace CS438_Mancala
 
         private void Get_Next_Turn()
         {
-            Process process;
             string path;
             string file;
             int move;
@@ -66,8 +65,17 @@ namespace CS438_Mancala
                 board.Print_Current_Board(path);
 
                 // run executable
-                process = Process.Start(file);
-                process.WaitForExit(timeToWaitInSeconds * 1000);
+                ProcessStartInfo processStartInfo = new ProcessStartInfo();
+                processStartInfo.FileName = file;
+
+                using (Process process = new Process())
+                {
+                    process.StartInfo = processStartInfo;
+                    process.Start();
+                    //process.WaitForExit(timeToWaitInSeconds * 1000);
+                    process.Close();
+                }
+                //process.WaitForExit(timeToWaitInSeconds * 1000);
                 
                 // read from move file
                 using (StreamReader sr = new StreamReader(path+"\\move.txt"))
@@ -100,6 +108,13 @@ namespace CS438_Mancala
             {
                 GameEndForm gameEndForm = new GameEndForm(board.gameState[0, 0], board.gameState[1, 6]);
                 gameEndForm.Show();
+                return;
+            }
+            if (board.illegalMoveMade == true)
+            {
+                IllegalMoveMadeForm illegalMoveMadeForm = new IllegalMoveMadeForm();
+                illegalMoveMadeForm.Show();
+                return;
             }
 
             //Change Turn Color
@@ -122,6 +137,11 @@ namespace CS438_Mancala
             }
 
             if (board.gameEnd == true)
+            {
+                return false;
+            }
+
+            if (board.illegalMoveMade == true)
             {
                 return false;
             }

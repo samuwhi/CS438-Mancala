@@ -16,6 +16,7 @@ namespace CS438_Mancala
         public int[,] gameState;
         public int playerTurn;
         public bool gameEnd = false;
+        public bool illegalMoveMade = false;
 
         public Board()
         {
@@ -141,8 +142,19 @@ namespace CS438_Mancala
             int col = pocket;
             bool goAgain = false;
 
-            if (stones == 0)    //checks to see if player clicks pocket with no stones. If so, returns.
+            if (stones == 0)
             {
+                illegalMoveMade = true;
+                return;
+            }
+            if (playerTurn == 0 && (pocket < 1 || pocket > 6))
+            {
+                illegalMoveMade = true;
+                return;
+            }
+            if (playerTurn == 1 && (pocket < 0 || pocket > 5))
+            {
+                illegalMoveMade = true;
                 return;
             }
 

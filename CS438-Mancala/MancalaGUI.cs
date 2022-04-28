@@ -76,26 +76,30 @@ namespace CS438_Mancala
                 psi.CreateNoWindow = true;
                 psi.WindowStyle = ProcessWindowStyle.Hidden;
 
-                /*if (console1WindowChecked)
+                if (console1WindowChecked == true)
                 {
                     psi.CreateNoWindow = false;
                     psi.WindowStyle = ProcessWindowStyle.Normal;
                 }
-                if (console2WindowChecked)
+                if (console2WindowChecked == true)
                 {
                     psi.CreateNoWindow = false;
                     psi.WindowStyle = ProcessWindowStyle.Normal;
-                }*/
-                
-                
-                process = Process.Start(filename);
-                if (!process.WaitForExit(timeToWait))
-                {
-                    Timeout to = new Timeout();
-                    to.Show();
-                    System.Environment.Exit(1);
                 }
-                
+
+                process = Process.Start(psi);
+                process.WaitForExit();
+
+                //                  Problem! This code below works for the timer but it causes the window pop up bug to happen again.
+
+                //process = Process.Start(filename);
+                //if (!process.WaitForExit(timeToWait))
+                //{
+                //    Timeout to = new Timeout();
+                //    to.Show();
+                //    System.Environment.Exit(1);
+                //}
+
                 // read from move file
                 using (StreamReader sr = new StreamReader("move.txt"))
                 {

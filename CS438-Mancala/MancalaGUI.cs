@@ -68,6 +68,10 @@ namespace CS438_Mancala
 
                 // run executable
                 string filename = Path.GetFileName(file);
+                ProcessStartInfo psi = new ProcessStartInfo();
+                psi.FileName = filename;
+                psi.CreateNoWindow = true;
+                psi.WindowStyle = ProcessWindowStyle.Hidden;
                 
                 
                 process = Process.Start(filename);
